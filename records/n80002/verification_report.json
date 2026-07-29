@@ -1,0 +1,382 @@
+{
+  "accepted": true,
+  "dimension_accounting": {
+    "quotient": 6,
+    "total": 80002,
+    "transverse": 79996
+  },
+  "equilibrium": {
+    "angles": [
+      "0.7075022922240479773997350048377121875888790404240193199705868159678831260812630176444310394436909795162111910536384726921542675074652906700116449808353475701159",
+      "0.9695436444054936117568286358937158693908641510210827627238350501109110355183931785736441921139255980486227618118002048866151709742070974990448223787429241980791",
+      "2.360517597335587843038275804522053753812010721930467561540755349251545841995219397627676225931630595384627269798172683355809036371390430784617396487291474821954"
+    ],
+    "krawczyk": {
+      "box": [
+        {
+          "lower": "0.70750229212398560000000000000000000",
+          "upper": "0.70750229232398560000000000000000000"
+        },
+        {
+          "lower": "0.96954364430541640000000000000000000",
+          "upper": "0.96954364450541640000000000000000000"
+        },
+        {
+          "lower": "2.3605175972355280000000000000000000",
+          "upper": "2.3605175974355280000000000000000000"
+        }
+      ],
+      "box_radius_about_short_seed": "1.00000000000e-10",
+      "global_uniqueness_claimed": false,
+      "method": "outward-rounded interval Krawczyk operator",
+      "remainder_infinity_norm_upper": "0.0000007440931187659487059725447",
+      "strict_interior_inclusion": true,
+      "unique_root_within_box": true
+    },
+    "max_abs_torque_residual": "6.284540440230820728100514e-172",
+    "newton_trace": [
+      {
+        "iteration": "0",
+        "max_residual": "2.616753071096781199270174e-12"
+      },
+      {
+        "iteration": "1",
+        "max_residual": "1.514129744721046259580085e-22"
+      },
+      {
+        "iteration": "2",
+        "max_residual": "3.725132188985235111366226e-44"
+      },
+      {
+        "iteration": "3",
+        "max_residual": "1.562406105874947655767735e-86"
+      },
+      {
+        "iteration": "4",
+        "max_residual": "6.284530569199053266687168e-172"
+      }
+    ],
+    "order_parameter": "0.03329948425549348445179796106290239205173",
+    "phases": [
+      "0.7075022922240479773997350048377121875888790404240193199705868159678831260812630176444310394436909795162111910536384726921542675074652906700116449808353475701159",
+      "-0.7075022922240479773997350048377121875888790404240193199705868159678831260812630176444310394436909795162111910536384726921542675074652906700116449808353475701159",
+      "0.9695436444054936117568286358937158693908641510210827627238350501109110355183931785736441921139255980486227618118002048866151709742070974990448223787429241980791",
+      "-0.9695436444054936117568286358937158693908641510210827627238350501109110355183931785736441921139255980486227618118002048866151709742070974990448223787429241980791",
+      "2.360517597335587843038275804522053753812010721930467561540755349251545841995219397627676225931630595384627269798172683355809036371390430784617396487291474821954",
+      "-2.360517597335587843038275804522053753812010721930467561540755349251545841995219397627676225931630595384627269798172683355809036371390430784617396487291474821954"
+    ],
+    "six_torques": [
+      "6.284540440230820728100514e-172",
+      "-6.284540440230820728100514e-172",
+      "5.626544865885668510498425e-172",
+      "-5.626544865885668510498425e-172",
+      "-2.592744946104949752356950e-172",
+      "2.592744946104949752356950e-172"
+    ]
+  },
+  "graph": {
+    "block_partition_complete_and_unique": true,
+    "blocks": [
+      {
+        "classes": [
+          0,
+          1
+        ],
+        "directed_degrees": [
+          10877,
+          10877
+        ],
+        "edge_count": 153724641,
+        "type": "residue_orbits"
+      },
+      {
+        "classes": [
+          0,
+          2
+        ],
+        "directed_degrees": [
+          7024,
+          14133
+        ],
+        "edge_count": 99270192,
+        "type": "complete"
+      },
+      {
+        "classes": [
+          0,
+          3
+        ],
+        "directed_degrees": [
+          7024,
+          14133
+        ],
+        "edge_count": 99270192,
+        "type": "complete"
+      },
+      {
+        "classes": [
+          0,
+          4
+        ],
+        "directed_degrees": [
+          15964,
+          11973
+        ],
+        "edge_count": 225619212,
+        "type": "residue_orbits"
+      },
+      {
+        "classes": [
+          0,
+          5
+        ],
+        "directed_degrees": [
+          0,
+          0
+        ],
+        "edge_count": 0,
+        "type": "absent"
+      },
+      {
+        "classes": [
+          1,
+          2
+        ],
+        "directed_degrees": [
+          7024,
+          14133
+        ],
+        "edge_count": 99270192,
+        "type": "complete"
+      },
+      {
+        "classes": [
+          1,
+          3
+        ],
+        "directed_degrees": [
+          7024,
+          14133
+        ],
+        "edge_count": 99270192,
+        "type": "complete"
+      },
+      {
+        "classes": [
+          1,
+          4
+        ],
+        "directed_degrees": [
+          0,
+          0
+        ],
+        "edge_count": 0,
+        "type": "absent"
+      },
+      {
+        "classes": [
+          1,
+          5
+        ],
+        "directed_degrees": [
+          15964,
+          11973
+        ],
+        "edge_count": 225619212,
+        "type": "residue_orbits"
+      },
+      {
+        "classes": [
+          2,
+          3
+        ],
+        "directed_degrees": [
+          885,
+          885
+        ],
+        "edge_count": 6216240,
+        "type": "residue_orbits"
+      },
+      {
+        "classes": [
+          2,
+          4
+        ],
+        "directed_degrees": [
+          18844,
+          7024
+        ],
+        "edge_count": 132360256,
+        "type": "complete"
+      },
+      {
+        "classes": [
+          2,
+          5
+        ],
+        "directed_degrees": [
+          0,
+          0
+        ],
+        "edge_count": 0,
+        "type": "absent"
+      },
+      {
+        "classes": [
+          3,
+          4
+        ],
+        "directed_degrees": [
+          0,
+          0
+        ],
+        "edge_count": 0,
+        "type": "absent"
+      },
+      {
+        "classes": [
+          3,
+          5
+        ],
+        "directed_degrees": [
+          18844,
+          7024
+        ],
+        "edge_count": 132360256,
+        "type": "complete"
+      },
+      {
+        "classes": [
+          4,
+          5
+        ],
+        "directed_degrees": [
+          18844,
+          18844
+        ],
+        "edge_count": 355096336,
+        "type": "complete"
+      }
+    ],
+    "class_degrees": [
+      55021,
+      55021,
+      55018,
+      55018,
+      56684,
+      56684
+    ],
+    "class_sizes": [
+      14133,
+      14133,
+      7024,
+      7024,
+      18844,
+      18844
+    ],
+    "connected": true,
+    "degree_sum": 4464423042,
+    "edge_count": 2232211521,
+    "handshake_exact": true,
+    "minimum_degree": 55018,
+    "reflection": {
+      "asymmetric_start_721_maps_to_start_0": true,
+      "automorphism_exact": true,
+      "class_involution": [
+        1,
+        0,
+        3,
+        2,
+        5,
+        4
+      ],
+      "exhaustive_loop_checks": 80002,
+      "residue_difference_automorphism_checks": 58865,
+      "vertex_involution_checks": 80002
+    },
+    "simple": true,
+    "vertex_count": 80002
+  },
+  "input": {
+    "only_local_graph_spec_read": true,
+    "path": "graph_spec.json",
+    "sha256": "5dca79605da2e0eeff844f39f5d1901ed77778c105d6fba1f92687e82f54bf9f"
+  },
+  "minimum_degree_ratio": {
+    "cross_product_excess": 277,
+    "decimal": "0.687716403544955688053899326258",
+    "exact": "55018/80001",
+    "target": "11/16"
+  },
+  "persisted_independent_audit": {
+    "enumerated_transverse_minimum": 19244.984787192374,
+    "narrow_basin_caveat": "Weak-mode amplitudes 0.0005 and 0.002 escaped to synchrony in both signs during the independent audit.",
+    "nonlinear_runs_omitted_by_this_compact_verifier": true,
+    "return_observed": {
+      "random_vertexwise_amplitudes_through": 0.01,
+      "weak_mode_amplitudes_both_signs": [
+        0.0001,
+        0.0003
+      ]
+    },
+    "verdict": "LOCAL RETURN CONFIRMED; BASIN SIZE NOT CERTIFIED"
+  },
+  "quotient": {
+    "absolute_gap": "0.4268309591368694700240952507431144612473",
+    "basis": "mass-orthonormal class-constant coordinates",
+    "exactly_one_rotation_zero": true,
+    "full_eigenvalues": [
+      "1.068678576704720344363313397722072518187e-177",
+      "0.4268309591368694700240952507431144612473",
+      "23.27767536080901950246483502657487752135",
+      "621.3324579626442861734950144984597610157",
+      "20522.89614507909480779279492657801125807",
+      "22942.72991760505575056680439665458197568"
+    ],
+    "normalized_gap": "0.000005335253607870671608510977859842434704723",
+    "normalized_gap_above_1e_minus_6": true,
+    "reflection_even_eigenvalues": [
+      "3.078559993272364610470882247113719843737e-177",
+      "0.4268309591368694700240952507431144612473",
+      "20522.89614507909480779279492657801125807"
+    ],
+    "reflection_odd_eigenvalues": [
+      "23.27767536080901950246483502657487752135",
+      "621.3324579626442861734950144984597610157",
+      "22942.72991760505575056680439665458197568"
+    ],
+    "rotation_residual_max": "2.102254475898853153567821e-175"
+  },
+  "schema": "reflection-witness-verification-v1",
+  "transverse": {
+    "all_transverse_modes_positive": true,
+    "comparison_eigenvalues": [
+      "17916.034446704979405422456089613539",
+      "18894.208971224969967880596774556888",
+      "20225.133443667702755994375324753694",
+      "21908.844224104239027554894084930716",
+      "22546.082317669952786737263680516770",
+      "22622.359623594896789915997313636764"
+    ],
+    "fiber_diagonal_terms": [
+      "20548.963904510584538421267275859266",
+      "20548.963904510584538421267275859266",
+      "22227.463270887095907146078882723743",
+      "22227.463270887095907146078882723743",
+      "19279.904338085689921185445475421177",
+      "19279.904338085689921185445475421177"
+    ],
+    "point_comparison_lower": "17916.034446704979405422456089613539",
+    "proof": "On each fiber-zero-sum space the clique contributes n_i I; complete blocks vanish; each partial biregular adjacency block has norm at most sqrt(d_ij*d_ji). The resulting scalar comparison is positive by outward-rounded Gershgorin bounds.",
+    "rigorous_absolute_lower": "17725.847529500526243780359900336393",
+    "rigorous_gershgorin_row_lowers": [
+      "17725.847529500526243780359900336393",
+      "17725.847529500526243780359900336393",
+      "21908.844216524997122145740156775824",
+      "21908.844216524997122145740156775824",
+      "18144.488316999455792989220827140734",
+      "18144.488316999455792989220827140734"
+    ],
+    "space_dimension": 79996
+  }
+}
