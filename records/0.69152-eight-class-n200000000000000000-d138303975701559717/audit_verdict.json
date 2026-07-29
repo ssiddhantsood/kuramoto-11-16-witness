@@ -1,0 +1,118 @@
+{
+  "schema": "independent-eight-class-adversarial-audit-v1",
+  "verdict": "CONFIRMED",
+  "scope": {
+    "equilibrium_uniqueness": "Unique in the explicit reflection-reduced rational box; isolated modulo rotation in full phase space. No global uniqueness claim.",
+    "nonlinear": "Local return only; no macroscopic basin claim.",
+    "graph_materialized": false
+  },
+  "graph": {
+    "N": 200000000000000000,
+    "minimum_degree": 138303975701559717,
+    "mu_exact": "138303975701559717/199999999999999999",
+    "mu_decimal": "0.6915198785077986",
+    "excess_over_11_16_exact": "12863611224955483/3199999999999999984",
+    "edge_count": 14019316159188853020996070000000000,
+    "simple": true,
+    "undirected": true,
+    "connected": true,
+    "biregular": true,
+    "reflection_automorphism": true
+  },
+  "exact_improvements": {
+    "approach154": {
+      "old_mu": "55018/80001",
+      "difference_exact": "60856360100478974735/16000199999999999919999"
+    },
+    "approach155": {
+      "old_mu": "5521403/7989063",
+      "difference_exact": "638575030229782896574/1597812599999999992010937"
+    }
+  },
+  "root": {
+    "parameterization": "[x0,x1,x2,x3,-x0,-x1,-x2,-x3]",
+    "center": [
+      "0.729558778480953506520991965332611684009029146181460523415641697663019221438076012231668377942167531160576841162017604603964712583051762265130453562439015256093713151812500811553610754126364056390853483866920038",
+      "2.358746108012727693153241587473315254157358613178879374913254676050679400980303954682875603454978206993501349017414467192263054558040411684242948592946514431993863722308863902659855299661289343127759869368811224",
+      "0.956640994361590213471092208356671377489813449353931084846813920488998079579715898132895649887740007759741679516627971824882792216043176540913924942117092228230893642282501893564616724214369065456074738011883871",
+      "0.956640994450157511720289930946293217057755914277296407851752110609490285985418882638270155661950401476556053977533578012934671753346587966460737617158548832032435262624787737191900411057751030823870331009072954"
+    ],
+    "rational_radius_each_coordinate": "1/10^190",
+    "arb_precision_bits": 768,
+    "krawczyk_unique": true,
+    "all_eight_torque_intervals_contain_zero": true,
+    "order_parameter_real_interval": "[0.0326139110233434853562408862029204230408922888440323093903249675290108317428 +/- 1.51e-77]",
+    "order_parameter_imaginary_exact": "0"
+  },
+  "quotient": {
+    "rigorous_normalized_gap_interval": {
+      "lower": "0.0000010000000156152773495392052108047429893159771133581723801621732323",
+      "upper": "0.0000010000000156152773495392052108047429893159771133581723801621732324"
+    },
+    "rigorous_normalized_margin_interval": {
+      "lower": "0.000000000000015615277349539205210804742989315977113358172380162173232392690",
+      "upper": "0.000000000000015615277349539205210804742989315977113358172380162173232392691"
+    },
+    "strictly_above_1e_minus_6": true,
+    "exact_absolute_shift_N_over_1e6": 200000000000,
+    "absolute_gap": "[200000003123.055469907841042160948597863195422671634476032434646478538146470 +/- 4.46e-64]",
+    "absolute_margin": "[3123.05546990784104216094859786319542267163447603243464647853814646955453466 +/- 2.81e-73]",
+    "zero_multiplicity": 1,
+    "positive_quotient_dimensions": 7
+  },
+  "transverse": {
+    "proof": "Fourier-free complement-aware biregular operator comparison with outward-rounded 768-bit Arb intervals and shifted-0.24 Sylvester test.",
+    "rigorous_normalized_lower_interval": {
+      "lower": "0.24007629108526466650363936535515075386137367423869322394160335639",
+      "upper": "0.24007629108526466650363936535515075386137367423869322394160335640"
+    },
+    "strictly_above_0_24": true,
+    "dimension": 199999999999999992
+  },
+  "full_hessian": {
+    "positive_dimensions": 199999999999999999,
+    "zero_dimensions": 1,
+    "kernel": "global rotation"
+  },
+  "nonlinear": {
+    "verdict": "CONFIRMED_LOCAL_ONLY",
+    "returned_signed_weak_amplitudes": [
+      -0.000001,
+      0.000001,
+      -0.00001,
+      0.00001,
+      -0.00005,
+      0.0001,
+      0.0002
+    ],
+    "escaped_signed_weak_amplitudes": [
+      -0.0001,
+      0.00025
+    ],
+    "analytically_guaranteed_weak_amplitude_below": "0.00000003744549360813222918113510979741789372415"
+  },
+  "post_independence_comparison": {
+    "producer_numeric_values_agree_at_reported_precision": true,
+    "producer_spec_sha256_matches": true,
+    "material_numeric_disagreement": false,
+    "scope_notes": [
+      "Producer formal transverse certificate proves >1/5, while this audit independently proves >0.24.",
+      "Producer per-record numerical certificate has a null nonlinear field despite a true acceptance flag; a separate producer artifact contains the tests.",
+      "The basin is local and narrow."
+    ]
+  },
+  "paths": {
+    "audit_report": "AUDIT_REPORT.md",
+    "exact_graph_report": "reports/graph_exact.json",
+    "root_report": "reports/root_arb.json",
+    "quotient_report": "reports/quotient_spectrum_arb.json",
+    "transverse_report": "reports/transverse_arb.json",
+    "nonlinear_report": "reports/nonlinear_return.json",
+    "artifact_comparison": "reports/artifact_comparison.json",
+    "ledger_spotchecks": "reports/ledger_spotchecks.json",
+    "independent_verifier": "independent_verify.py",
+    "nonlinear_verifier": "nonlinear_return.py",
+    "comparison_script": "compare_artifacts.py",
+    "ledger_script": "ledger_spotcheck.py"
+  }
+}

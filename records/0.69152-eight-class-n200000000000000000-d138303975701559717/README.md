@@ -1,7 +1,7 @@
 # 0.691519878508 — eight-class witness
 
-- Status: **FORMAL_INTERVAL_CERTIFIED**
-- Audit: `adversarial_audit_pending`
+- Status: **CONFIRMED**
+- Audit: `independent_768bit_arb_audit`
 - Source approach: `156`
 - Vertices: `200000000000000000`
 - Minimum degree: `138303975701559717`

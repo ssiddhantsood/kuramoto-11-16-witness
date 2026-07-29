@@ -127,6 +127,7 @@ def approach_155_records(source_root: Path) -> list[dict]:
 
 def approach_156_records(source_root: Path) -> list[dict]:
     root = source_root / "approach_156_bottleneck_fiber_splitting"
+    audit_root = source_root / "approach_160_independent_0691519_audit"
     ledger = read_json(root / "artifacts" / "record_ledger.json")
     records = []
     seen_specs = set()
@@ -136,6 +137,10 @@ def approach_156_records(source_root: Path) -> list[dict]:
         if digest in seen_specs:
             continue
         seen_specs.add(digest)
+        independently_confirmed = (
+            row["name"].endswith("d138303975701559717")
+            and (audit_root / "verdict.json").exists()
+        )
         records.append(
             {
                 "source_approach": 156,
@@ -143,10 +148,14 @@ def approach_156_records(source_root: Path) -> list[dict]:
                 "n": int(row["N"]),
                 "degree": int(row["minimum_degree"]),
                 "mu": Fraction(int(row["mu_numerator"]), int(row["mu_denominator"])),
-                "status": "FORMAL_INTERVAL_CERTIFIED",
+                "status": (
+                    "CONFIRMED"
+                    if independently_confirmed
+                    else "FORMAL_INTERVAL_CERTIFIED"
+                ),
                 "audit_status": (
-                    "adversarial_audit_pending"
-                    if row["name"].endswith("d138303975701559717")
+                    "independent_768bit_arb_audit"
+                    if independently_confirmed
                     else "producer_arb_and_independent_replay"
                 ),
                 "spec": spec,
@@ -156,7 +165,16 @@ def approach_156_records(source_root: Path) -> list[dict]:
                     if row.get("independent_replay")
                     else None
                 ),
-                "audit": None,
+                "audit": (
+                    audit_root / "verdict.json"
+                    if independently_confirmed
+                    else None
+                ),
+                "audit_report": (
+                    audit_root / "AUDIT_REPORT.md"
+                    if independently_confirmed
+                    else None
+                ),
                 "formal": root / row["formal_interval_certificate"],
                 "formal_output": root / row["formal_verifier_output"],
                 "numerical": root / row["numerical_certificate"],
