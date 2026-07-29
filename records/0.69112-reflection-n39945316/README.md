@@ -1,7 +1,7 @@
 # 0.691120222735 — reflection witness
 
-- Status: **CERTIFIED_REPLAY**
-- Audit: `adversarial_audit_pending`
+- Status: **CONFIRMED**
+- Audit: `independent_adversarial_audit`
 - Source approach: `155`
 - Vertices: `39945316`
 - Minimum degree: `27607015`

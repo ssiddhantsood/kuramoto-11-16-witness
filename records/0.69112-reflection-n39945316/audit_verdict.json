@@ -1,0 +1,76 @@
+{
+  "verdict": "CONFIRMED",
+  "record": {
+    "vertex_count": 39945316,
+    "class_sizes": [
+      7652907,
+      7652907,
+      2866160,
+      2866160,
+      9453591,
+      9453591
+    ],
+    "minimum_degree": 27607015,
+    "edge_count": 559051789848239,
+    "mu_unreduced": "27607015/39945315",
+    "mu_reduced": "5521403/7989063",
+    "mu_decimal": "0.691120222734505911394114679031",
+    "raw_cross_product_excess_over_11_16": 2313775,
+    "improvement_over_approach_154": "725164423/213044343021"
+  },
+  "equilibrium": {
+    "root_center": [
+      "-0.7298280527765897229697129801179898060357449160706467174414658360662728516421171864560293797789015254",
+      "0.9562664565985826186444191292220588927360317239017627527188665517775061686058749353996018110354844152",
+      "-2.3588991933212602771956656878482580781737733343514834633984263092394449420181618577115259312482157758"
+    ],
+    "outward_box_radius_each_coordinate": "1e-30",
+    "max_abs_six_torque_residual": "1.25803686906194009926309306706e-234",
+    "krawczyk_strict_inclusion": true,
+    "krawczyk_contraction_infinity_norm_upper": "4.005572036354451769158588502670102855586e-25",
+    "unique_in_box": true,
+    "nonsynchronous": true,
+    "order_parameter": "0.0327161548791958039801716763194271908900980497078415655751404"
+  },
+  "spectrum": {
+    "absolute_quotient_gap_interval": [
+      "45.65859298251349624011717980759663310298848583997537671",
+      "45.65859298251349624011785121504407673463041035405039999"
+    ],
+    "normalized_by": 39945316,
+    "normalized_gap_interval": [
+      "0.000001143027457399848739214309377539950694169",
+      "0.000001143027457399848739214326185704578647835"
+    ],
+    "normalized_margin_lower_over_1e_6": "1.4302745739984873921430937753995069e-7",
+    "rigorous_transverse_strict_lower_bound": 9589733,
+    "claimed_transverse_lower_bound_confirmed": true,
+    "structural_rotation_zero": true,
+    "exactly_one_zero": true,
+    "jacobian_equals_negative_hessian": true
+  },
+  "nonlinear": {
+    "verdict": "LOCAL_RETURN_CERTIFIED",
+    "weak_mode_both_signs_two_amplitudes": true,
+    "random_compact_trials": 160,
+    "arbitrary_full_graph_sup_norm_radius": "1e-7",
+    "strong_return_coefficient_lower": "33.6350664",
+    "finite_basin_caveat": true
+  },
+  "independence": {
+    "prior_approach_code_imported": false,
+    "prior_reports_read_before_independent_calculations": false,
+    "post_audit_material_discrepancies": []
+  },
+  "artifacts": {
+    "report": "AUDIT_REPORT.md",
+    "graph": "graph_audit.json",
+    "equilibrium": "equilibrium_certificate.json",
+    "spectrum": "spectral_certificate.json",
+    "fourier_crosscheck": "fourier_mode_crosscheck.json",
+    "operator_validation": "operator_validation.json",
+    "nonlinear": "nonlinear_return.json",
+    "other_records": "other_records_spotcheck.json",
+    "prior_comparison": "artifact_comparison.json"
+  }
+}

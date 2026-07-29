@@ -80,11 +80,16 @@ def first_records(source_root: Path) -> list[dict]:
 
 def approach_155_records(source_root: Path) -> list[dict]:
     root = source_root / "approach_155_six_class_density_frontier"
+    audit_root = source_root / "approach_159_independent_069112_audit"
     ledger = read_json(root / "artifacts" / "record_ledger.json")
     records = []
     for row in ledger["records"]:
         spec = Path(row["spec_path"])
         record_dir = spec.parent
+        independently_confirmed = (
+            row["weighted_record"] == "gamma_1e-06"
+            and (audit_root / "verdict.json").exists()
+        )
         records.append(
             {
                 "source_approach": 155,
@@ -92,16 +97,27 @@ def approach_155_records(source_root: Path) -> list[dict]:
                 "n": int(row["vertex_count"]),
                 "degree": int(row["mu_numerator"]),
                 "mu": Fraction(int(row["mu_numerator"]), int(row["mu_denominator"])),
-                "status": "CERTIFIED_REPLAY",
+                "status": (
+                    "CONFIRMED" if independently_confirmed else "CERTIFIED_REPLAY"
+                ),
                 "audit_status": (
-                    "adversarial_audit_pending"
-                    if row["weighted_record"] == "gamma_1e-06"
+                    "independent_adversarial_audit"
+                    if independently_confirmed
                     else "producer_interval_replay"
                 ),
                 "spec": spec,
                 "verifier_kind": "six-class",
                 "report": record_dir / "independent_replay.json",
-                "audit": None,
+                "audit": (
+                    audit_root / "verdict.json"
+                    if independently_confirmed
+                    else None
+                ),
+                "audit_report": (
+                    audit_root / "AUDIT_REPORT.md"
+                    if independently_confirmed
+                    else None
+                ),
                 "formal": None,
                 "nonlinear": record_dir / "nonlinear_return.json",
             }
@@ -201,6 +217,7 @@ def package_record(record: dict, target: Path, source_root: Path, slug: str) -> 
     command = package_verifier(record, target, source_root)
     copy_if(record.get("report"), target / "verification_report.json")
     copy_if(record.get("audit"), target / "audit_verdict.json")
+    copy_if(record.get("audit_report"), target / "INDEPENDENT_AUDIT.md")
     copy_if(record.get("formal"), target / "formal_certificate.json")
     copy_if(record.get("formal_output"), target / "formal_verifier_output.txt")
     copy_if(record.get("numerical"), target / "numerical_certificate.json")

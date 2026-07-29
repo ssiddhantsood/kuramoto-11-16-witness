@@ -13,7 +13,7 @@ Statuses distinguish independently confirmed records from producer-side interval
 | `0.689689723050` | `10231860` | reflection | `CERTIFIED_REPLAY` / `producer_interval_replay` | [`0.68969-reflection-n10231860/`](0.68969-reflection-n10231860/README.md) |
 | `0.690109034599` | `20480014` | reflection | `CERTIFIED_REPLAY` / `producer_interval_replay` | [`0.69011-reflection-n20480014/`](0.69011-reflection-n20480014/README.md) |
 | `0.690935460279` | `32008212` | reflection | `CERTIFIED_REPLAY` / `producer_interval_replay` | [`0.69094-reflection-n32008212/`](0.69094-reflection-n32008212/README.md) |
-| `0.691120222735` | `39945316` | reflection | `CERTIFIED_REPLAY` / `adversarial_audit_pending` | [`0.69112-reflection-n39945316/`](0.69112-reflection-n39945316/README.md) |
+| `0.691120222735` | `39945316` | reflection | `CONFIRMED` / `independent_adversarial_audit` | [`0.69112-reflection-n39945316/`](0.69112-reflection-n39945316/README.md) |
 | `0.691519878032` | `100000000000000000` | eight-class | `FORMAL_INTERVAL_CERTIFIED` / `producer_arb_and_independent_replay` | [`0.69152-eight-class-n100000000000000000/`](0.69152-eight-class-n100000000000000000/README.md) |
 | `0.691519878268` | `40000000000000000` | eight-class | `FORMAL_INTERVAL_CERTIFIED` / `producer_arb_and_independent_replay` | [`0.69152-eight-class-n40000000000000000/`](0.69152-eight-class-n40000000000000000/README.md) |
 | `0.691519878268` | `20000000000000000` | eight-class | `FORMAL_INTERVAL_CERTIFIED` / `producer_arb_and_independent_replay` | [`0.69152-eight-class-n20000000000000000/`](0.69152-eight-class-n20000000000000000/README.md) |
