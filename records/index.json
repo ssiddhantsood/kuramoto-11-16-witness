@@ -64,6 +64,36 @@
     },
     {
       "schema": "kuramoto-finite-record-v1",
+      "slug": "0.68883-five-pair-n22222217777778",
+      "source_approach": 158,
+      "architecture": "five-pair",
+      "status": "CERTIFIED_REPLAY",
+      "audit_status": "producer_interval_replay",
+      "vertex_count": 22222217777778,
+      "minimum_degree": 15307293675990,
+      "mu_exact": "15307293675990/22222217777777",
+      "mu_decimal": 0.6888283531852447,
+      "excess_over_11_16_cross_product": 472303260293,
+      "graph_spec_sha256": "0acbe760b5750f98723de8710900df924243cfd7ee99e9b5a6d11aeb94686dd3",
+      "verify_command": "python3 verify.py --spec graph_spec.json --output verification_report.json"
+    },
+    {
+      "schema": "kuramoto-finite-record-v1",
+      "slug": "0.68883-four-pair-n22222217777778",
+      "source_approach": 158,
+      "architecture": "four-pair",
+      "status": "CERTIFIED_REPLAY",
+      "audit_status": "producer_interval_replay",
+      "vertex_count": 22222217777778,
+      "minimum_degree": 15307295412967,
+      "mu_exact": "15307295412967/22222217777777",
+      "mu_decimal": 0.6888284313492253,
+      "excess_over_11_16_cross_product": 472331051925,
+      "graph_spec_sha256": "79ffcfedb8bc51445d13c4d31ff88833ad548302e137b13e72dcec781d3d1a93",
+      "verify_command": "python3 verify.py --spec graph_spec.json --output verification_report.json"
+    },
+    {
+      "schema": "kuramoto-finite-record-v1",
       "slug": "0.68969-reflection-n10231860",
       "source_approach": 155,
       "architecture": "reflection",
@@ -121,6 +151,36 @@
       "excess_over_11_16_cross_product": 2313775,
       "graph_spec_sha256": "68e730b86130a783137552cb01f5fbf1ceddde38ac3a6364c07c887da7bc0324",
       "verify_command": "python3 verify.py --spec graph_spec.json --output verification_report.json --skip-fourier"
+    },
+    {
+      "schema": "kuramoto-finite-record-v1",
+      "slug": "0.69125-five-pair-n2222222177777778",
+      "source_approach": 158,
+      "architecture": "five-pair",
+      "status": "CERTIFIED_REPLAY",
+      "audit_status": "producer_interval_replay",
+      "vertex_count": 2222222177777778,
+      "minimum_degree": 1536109167082421,
+      "mu_exact": "1536109167082421/2222222177777777",
+      "mu_decimal": 0.6912491390120725,
+      "excess_over_11_16_cross_product": 133302717763189,
+      "graph_spec_sha256": "a10ef4dee3a9060eed662296e17e9145ab1b225f719b70b4ed61f746f8d1a9e5",
+      "verify_command": "python3 verify.py --spec graph_spec.json --output verification_report.json"
+    },
+    {
+      "schema": "kuramoto-finite-record-v1",
+      "slug": "0.69125-four-pair-n20000000000000000",
+      "source_approach": 158,
+      "architecture": "four-pair",
+      "status": "CERTIFIED_REPLAY",
+      "audit_status": "producer_interval_replay",
+      "vertex_count": 20000000000000000,
+      "minimum_degree": 13824987343133142,
+      "mu_exact": "13824987343133142/19999999999999999",
+      "mu_decimal": 0.6912493671566571,
+      "excess_over_11_16_cross_product": 1199797490130283,
+      "graph_spec_sha256": "c846b1bde72f7dca5da0f1ced5ba633668975148fb2874e9be800ab344bf91c4",
+      "verify_command": "python3 verify.py --spec graph_spec.json --output verification_report.json"
     },
     {
       "schema": "kuramoto-finite-record-v1",
@@ -211,6 +271,36 @@
       "excess_over_11_16_cross_product": 12863611224955483,
       "graph_spec_sha256": "caa32a330b61ab4907f77a11773d84b7c74087f91d52c844d426235c542bf774",
       "verify_command": "python3 verify.py --spec graph_spec.json --out verification_report.json"
+    },
+    {
+      "schema": "kuramoto-finite-record-v1",
+      "slug": "0.69152-five-pair-n200000000000000000000000000",
+      "source_approach": 158,
+      "architecture": "five-pair",
+      "status": "CERTIFIED_REPLAY",
+      "audit_status": "producer_interval_replay",
+      "vertex_count": 200000000000000000000000000,
+      "minimum_degree": 138304494614954012746623412,
+      "mu_exact": "138304494614954012746623412/199999999999999999999999999",
+      "mu_decimal": 0.6915224730747701,
+      "excess_over_11_16_cross_product": 12871913839264203945974603,
+      "graph_spec_sha256": "0a9fa225159442b260206a524a2ef40db9b613b7eb2693ff652844560350002e",
+      "verify_command": "python3 verify.py --spec graph_spec.json --output verification_report.json"
+    },
+    {
+      "schema": "kuramoto-finite-record-v1",
+      "slug": "0.69152-four-pair-n200000000000000000000000000",
+      "source_approach": 158,
+      "architecture": "four-pair",
+      "status": "CONFIRMED",
+      "audit_status": "independent_1024bit_arb_audit",
+      "vertex_count": 200000000000000000000000000,
+      "minimum_degree": 138304542182060000915026158,
+      "mu_exact": "138304542182060000915026158/199999999999999999999999999",
+      "mu_decimal": 0.6915227109103,
+      "excess_over_11_16_cross_product": 12872674912960014640418539,
+      "graph_spec_sha256": "50e073d06ec0384f455c9c75e24adeaf7974b0db296b9d1b40a5728f1fbc8c2a",
+      "verify_command": "python3 verify.py --spec graph_spec.json --output verification_report.json"
     }
   ]
 }

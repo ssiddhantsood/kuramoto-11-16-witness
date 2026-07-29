@@ -1,0 +1,982 @@
+{
+  "classes": [
+    {
+      "id": 0,
+      "label": "P1",
+      "reflection_pair": 1,
+      "reflection_sign": 1,
+      "size": 5244176142249
+    },
+    {
+      "id": 1,
+      "label": "M1",
+      "reflection_pair": 1,
+      "reflection_sign": -1,
+      "size": 5244176142249
+    },
+    {
+      "id": 2,
+      "label": "P2",
+      "reflection_pair": 2,
+      "reflection_sign": 1,
+      "size": 1704206496246
+    },
+    {
+      "id": 3,
+      "label": "M2",
+      "reflection_pair": 2,
+      "reflection_sign": -1,
+      "size": 1704206496246
+    },
+    {
+      "id": 4,
+      "label": "P3",
+      "reflection_pair": 3,
+      "reflection_sign": 1,
+      "size": 443333289
+    },
+    {
+      "id": 5,
+      "label": "M3",
+      "reflection_pair": 3,
+      "reflection_sign": -1,
+      "size": 443333289
+    },
+    {
+      "id": 6,
+      "label": "P4",
+      "reflection_pair": 4,
+      "reflection_sign": 1,
+      "size": 4161836250483
+    },
+    {
+      "id": 7,
+      "label": "M4",
+      "reflection_pair": 4,
+      "reflection_sign": -1,
+      "size": 4161836250483
+    },
+    {
+      "id": 8,
+      "label": "P5",
+      "reflection_pair": 5,
+      "reflection_sign": 1,
+      "size": 446666622
+    },
+    {
+      "id": 9,
+      "label": "M5",
+      "reflection_pair": 5,
+      "reflection_sign": -1,
+      "size": 446666622
+    }
+  ],
+  "construction_screen": {
+    "accepted_float_screen": true,
+    "angles": [
+      0.7826753265276792,
+      2.1776845702977146,
+      2.389526313037467,
+      2.4195110413093768,
+      2.4494953282570204
+    ],
+    "beats_prior_exactly": true,
+    "class_degrees": [
+      15766506471511,
+      15766506471511,
+      15307293675990,
+      15307293675990,
+      15307294535723,
+      15307294535723,
+      15307294052313,
+      15307294052313,
+      15307294905298,
+      15307294905298
+    ],
+    "edge_count": 172489201181738504323965261,
+    "mass_denominator": 3333333,
+    "mass_weights": [
+      1573253,
+      511262,
+      133,
+      1248551,
+      134
+    ],
+    "minimum_degree": 15307293675990,
+    "mu_exact": "15307293675990/22222217777777",
+    "mu_float": 0.6888283531852447,
+    "orbit_scale": 3333333,
+    "pair_sizes": [
+      5244176142249,
+      1704206496246,
+      443333289,
+      4161836250483,
+      446666622
+    ],
+    "quotient": {
+      "full": [
+        -2.414622305019125e-18,
+        7.829866930760476e-05,
+        0.00011108231335454051,
+        0.006073069876363055,
+        0.25657134893518857,
+        0.2573431638786706,
+        0.2573443584115213,
+        0.25883784208833943,
+        0.2588414902399272,
+        0.28880545857347784
+      ],
+      "lifted_even": [
+        0.00011108231335434606,
+        0.25657134893518835,
+        0.2573443584115212,
+        0.2588414902399272,
+        1.9999999999999996
+      ],
+      "normalized_gap": 7.829866930759879e-05,
+      "odd": [
+        7.829866930759879e-05,
+        0.006073069876363038,
+        0.2573431638786707,
+        0.2588378420883394,
+        0.2888054585734775
+      ]
+    },
+    "root_converged": true,
+    "rounding_policy": "ceil",
+    "source_name": "m5_gamma_1e-04",
+    "torque_residual_normalized": 6.223654333667911e-17,
+    "transverse": {
+      "comparison_eigenvalues": [
+        0.23977333106101867,
+        0.23990648367772693,
+        0.25299188560490926,
+        0.2573436291195935,
+        0.25734367659480567,
+        0.25883915460838175,
+        0.25884006136967563,
+        0.26341835033107386,
+        0.27724860057713463,
+        0.2783009400418304
+      ],
+      "covered_transverse_dimensions": 22222217777768,
+      "fractional_blocks": [
+        {
+          "classes": [
+            0,
+            3
+          ],
+          "count": 1,
+          "modulus": 3333333,
+          "normalized_weighted_norm_upper": 3.9697392771803485e-08,
+          "normalized_zero_sum_norm_upper": 4.035837229093039e-08
+        },
+        {
+          "classes": [
+            0,
+            4
+          ],
+          "count": 2916631,
+          "modulus": 3333333,
+          "normalized_weighted_norm_upper": 9.777562361387454e-06,
+          "normalized_zero_sum_norm_upper": 0.000271245967418395
+        },
+        {
+          "classes": [
+            0,
+            5
+          ],
+          "count": 1,
+          "modulus": 3333333,
+          "normalized_weighted_norm_upper": 6.506302124928619e-10,
+          "normalized_zero_sum_norm_upper": 6.509351225057594e-10
+        },
+        {
+          "classes": [
+            0,
+            6
+          ],
+          "count": 2861863,
+          "modulus": 3333333,
+          "normalized_weighted_norm_upper": 0.0019622593696247124,
+          "normalized_zero_sum_norm_upper": 0.029735078666087576
+        },
+        {
+          "classes": [
+            0,
+            7
+          ],
+          "count": 1,
+          "modulus": 3333333,
+          "normalized_weighted_norm_upper": 6.295312052788912e-08,
+          "normalized_zero_sum_norm_upper": 6.306886687612695e-08
+        },
+        {
+          "classes": [
+            0,
+            8
+          ],
+          "count": 2806778,
+          "modulus": 3333333,
+          "normalized_weighted_norm_upper": 3.2985170812792394e-05,
+          "normalized_zero_sum_norm_upper": 0.00034403927606771543
+        },
+        {
+          "classes": [
+            0,
+            9
+          ],
+          "count": 1,
+          "modulus": 3333333,
+          "normalized_weighted_norm_upper": 6.506992189200107e-10,
+          "normalized_zero_sum_norm_upper": 6.533776643801984e-10
+        },
+        {
+          "classes": [
+            1,
+            2
+          ],
+          "count": 1,
+          "modulus": 3333333,
+          "normalized_weighted_norm_upper": 3.9697392771803485e-08,
+          "normalized_zero_sum_norm_upper": 4.035837229093039e-08
+        },
+        {
+          "classes": [
+            1,
+            4
+          ],
+          "count": 1,
+          "modulus": 3333333,
+          "normalized_weighted_norm_upper": 6.506302124928619e-10,
+          "normalized_zero_sum_norm_upper": 6.509351225057594e-10
+        },
+        {
+          "classes": [
+            1,
+            5
+          ],
+          "count": 2916631,
+          "modulus": 3333333,
+          "normalized_weighted_norm_upper": 9.777562361387454e-06,
+          "normalized_zero_sum_norm_upper": 0.000271245967418395
+        },
+        {
+          "classes": [
+            1,
+            6
+          ],
+          "count": 1,
+          "modulus": 3333333,
+          "normalized_weighted_norm_upper": 6.295312052788912e-08,
+          "normalized_zero_sum_norm_upper": 6.306886687612695e-08
+        },
+        {
+          "classes": [
+            1,
+            7
+          ],
+          "count": 2861863,
+          "modulus": 3333333,
+          "normalized_weighted_norm_upper": 0.0019622593696247124,
+          "normalized_zero_sum_norm_upper": 0.029735078666087576
+        },
+        {
+          "classes": [
+            1,
+            8
+          ],
+          "count": 1,
+          "modulus": 3333333,
+          "normalized_weighted_norm_upper": 6.506992189200107e-10,
+          "normalized_zero_sum_norm_upper": 6.533776643801984e-10
+        },
+        {
+          "classes": [
+            1,
+            9
+          ],
+          "count": 2806778,
+          "modulus": 3333333,
+          "normalized_weighted_norm_upper": 3.2985170812792394e-05,
+          "normalized_zero_sum_norm_upper": 0.00034403927606771543
+        },
+        {
+          "classes": [
+            2,
+            3
+          ],
+          "count": 33456963455,
+          "modulus": 1704206496246,
+          "normalized_weighted_norm_upper": 0.0005261697323484377,
+          "normalized_zero_sum_norm_upper": 0.0015055636565877162
+        },
+        {
+          "classes": [
+            4,
+            5
+          ],
+          "count": 145853786,
+          "modulus": 443333289,
+          "normalized_weighted_norm_upper": 4.2301952498307174e-07,
+          "normalized_zero_sum_norm_upper": 6.350282864394911e-06
+        },
+        {
+          "classes": [
+            4,
+            7
+          ],
+          "count": 2520732,
+          "modulus": 3333333,
+          "normalized_weighted_norm_upper": 4.547127591460255e-05,
+          "normalized_zero_sum_norm_upper": 0.00047121479411858693
+        },
+        {
+          "classes": [
+            4,
+            8
+          ],
+          "count": 3333242,
+          "modulus": 3333333,
+          "normalized_weighted_norm_upper": 5.456960638803373e-10,
+          "normalized_zero_sum_norm_upper": 5.466787750526403e-10
+        },
+        {
+          "classes": [
+            4,
+            9
+          ],
+          "count": 1096627,
+          "modulus": 3333333,
+          "normalized_weighted_norm_upper": 8.050151413198132e-07,
+          "normalized_zero_sum_norm_upper": 6.374111401641023e-06
+        },
+        {
+          "classes": [
+            5,
+            6
+          ],
+          "count": 2520732,
+          "modulus": 3333333,
+          "normalized_weighted_norm_upper": 4.547127591460255e-05,
+          "normalized_zero_sum_norm_upper": 0.00047121479411858693
+        },
+        {
+          "classes": [
+            5,
+            8
+          ],
+          "count": 1096627,
+          "modulus": 3333333,
+          "normalized_weighted_norm_upper": 8.050151413198132e-07,
+          "normalized_zero_sum_norm_upper": 6.374111401641023e-06
+        },
+        {
+          "classes": [
+            5,
+            9
+          ],
+          "count": 3333242,
+          "modulus": 3333333,
+          "normalized_weighted_norm_upper": 5.456960638803373e-10,
+          "normalized_zero_sum_norm_upper": 5.466787750526403e-10
+        },
+        {
+          "classes": [
+            6,
+            7
+          ],
+          "count": 3233027101844,
+          "modulus": 4161836250483,
+          "normalized_weighted_norm_upper": 0.005278675803648266,
+          "normalized_zero_sum_norm_upper": 0.041796420048038595
+        },
+        {
+          "classes": [
+            6,
+            9
+          ],
+          "count": 2659154,
+          "modulus": 3333333,
+          "normalized_weighted_norm_upper": 6.1207750848275e-05,
+          "normalized_zero_sum_norm_upper": 0.0003924129795592624
+        },
+        {
+          "classes": [
+            7,
+            8
+          ],
+          "count": 2659154,
+          "modulus": 3333333,
+          "normalized_weighted_norm_upper": 6.1207750848275e-05,
+          "normalized_zero_sum_norm_upper": 0.0003924129795592624
+        },
+        {
+          "classes": [
+            8,
+            9
+          ],
+          "count": 146955184,
+          "modulus": 446666622,
+          "normalized_weighted_norm_upper": 1.186966515745538e-06,
+          "normalized_zero_sum_norm_upper": 6.398029352097128e-06
+        }
+      ],
+      "normalized_beta": [
+        0.2400714483985432,
+        0.2400714483985432,
+        0.27777477030944053,
+        0.27777477030944053,
+        0.25734360200852513,
+        0.25734360200852513,
+        0.2579735139727677,
+        0.2579735139727677,
+        0.2588397218037985,
+        0.2588397218037985
+      ],
+      "normalized_lower_bound": 0.23977333106101867,
+      "proof": "Block comparison on the direct sum of classwise zero-sum spaces. Complete blocks vanish. For a consecutive interval of k residues modulo g, use the complement when k>g/2 and |sum exp(iqh)| <= min(min(k,g-k),1/sin(pi/g))."
+    },
+    "vertex_count": 22222217777778,
+    "weyl_lipschitz": {
+      "finite_margin": 7.829866930759879e-05,
+      "fixed_phase_lifted_even_norm_difference": 0.00015097959063834783,
+      "maximum_angle_motion": 0.00031626289851649503,
+      "source_margin": 9.999999990222782e-05
+    }
+  },
+  "cross_blocks": [
+    {
+      "classes": [
+        0,
+        1
+      ],
+      "type": "complete"
+    },
+    {
+      "classes": [
+        0,
+        2
+      ],
+      "type": "complete"
+    },
+    {
+      "classes": [
+        0,
+        3
+      ],
+      "modulus": 3333333,
+      "shift_count": 1,
+      "shift_start": 0,
+      "type": "residue_orbits"
+    },
+    {
+      "classes": [
+        0,
+        4
+      ],
+      "modulus": 3333333,
+      "shift_count": 2916631,
+      "shift_start": 416703,
+      "type": "residue_orbits"
+    },
+    {
+      "classes": [
+        0,
+        5
+      ],
+      "modulus": 3333333,
+      "shift_count": 1,
+      "shift_start": 0,
+      "type": "residue_orbits"
+    },
+    {
+      "classes": [
+        0,
+        6
+      ],
+      "modulus": 3333333,
+      "shift_count": 2861863,
+      "shift_start": 471471,
+      "type": "residue_orbits"
+    },
+    {
+      "classes": [
+        0,
+        7
+      ],
+      "modulus": 3333333,
+      "shift_count": 1,
+      "shift_start": 0,
+      "type": "residue_orbits"
+    },
+    {
+      "classes": [
+        0,
+        8
+      ],
+      "modulus": 3333333,
+      "shift_count": 2806778,
+      "shift_start": 526556,
+      "type": "residue_orbits"
+    },
+    {
+      "classes": [
+        0,
+        9
+      ],
+      "modulus": 3333333,
+      "shift_count": 1,
+      "shift_start": 0,
+      "type": "residue_orbits"
+    },
+    {
+      "classes": [
+        1,
+        2
+      ],
+      "modulus": 3333333,
+      "shift_count": 1,
+      "shift_start": 0,
+      "type": "residue_orbits"
+    },
+    {
+      "classes": [
+        1,
+        3
+      ],
+      "type": "complete"
+    },
+    {
+      "classes": [
+        1,
+        4
+      ],
+      "modulus": 3333333,
+      "shift_count": 1,
+      "shift_start": 0,
+      "type": "residue_orbits"
+    },
+    {
+      "classes": [
+        1,
+        5
+      ],
+      "modulus": 3333333,
+      "shift_count": 2916631,
+      "shift_start": 0,
+      "type": "residue_orbits"
+    },
+    {
+      "classes": [
+        1,
+        6
+      ],
+      "modulus": 3333333,
+      "shift_count": 1,
+      "shift_start": 0,
+      "type": "residue_orbits"
+    },
+    {
+      "classes": [
+        1,
+        7
+      ],
+      "modulus": 3333333,
+      "shift_count": 2861863,
+      "shift_start": 0,
+      "type": "residue_orbits"
+    },
+    {
+      "classes": [
+        1,
+        8
+      ],
+      "modulus": 3333333,
+      "shift_count": 1,
+      "shift_start": 0,
+      "type": "residue_orbits"
+    },
+    {
+      "classes": [
+        1,
+        9
+      ],
+      "modulus": 3333333,
+      "shift_count": 2806778,
+      "shift_start": 0,
+      "type": "residue_orbits"
+    },
+    {
+      "classes": [
+        2,
+        3
+      ],
+      "modulus": 1704206496246,
+      "shift_count": 33456963455,
+      "shift_start": 0,
+      "type": "residue_orbits"
+    },
+    {
+      "classes": [
+        2,
+        4
+      ],
+      "type": "complete"
+    },
+    {
+      "classes": [
+        2,
+        5
+      ],
+      "type": "complete"
+    },
+    {
+      "classes": [
+        2,
+        6
+      ],
+      "type": "complete"
+    },
+    {
+      "classes": [
+        2,
+        7
+      ],
+      "type": "complete"
+    },
+    {
+      "classes": [
+        2,
+        8
+      ],
+      "type": "complete"
+    },
+    {
+      "classes": [
+        2,
+        9
+      ],
+      "type": "complete"
+    },
+    {
+      "classes": [
+        3,
+        4
+      ],
+      "type": "complete"
+    },
+    {
+      "classes": [
+        3,
+        5
+      ],
+      "type": "complete"
+    },
+    {
+      "classes": [
+        3,
+        6
+      ],
+      "type": "complete"
+    },
+    {
+      "classes": [
+        3,
+        7
+      ],
+      "type": "complete"
+    },
+    {
+      "classes": [
+        3,
+        8
+      ],
+      "type": "complete"
+    },
+    {
+      "classes": [
+        3,
+        9
+      ],
+      "type": "complete"
+    },
+    {
+      "classes": [
+        4,
+        5
+      ],
+      "modulus": 443333289,
+      "shift_count": 145853786,
+      "shift_start": 0,
+      "type": "residue_orbits"
+    },
+    {
+      "classes": [
+        4,
+        6
+      ],
+      "type": "complete"
+    },
+    {
+      "classes": [
+        4,
+        7
+      ],
+      "modulus": 3333333,
+      "shift_count": 2520732,
+      "shift_start": 812602,
+      "type": "residue_orbits"
+    },
+    {
+      "classes": [
+        4,
+        8
+      ],
+      "modulus": 3333333,
+      "shift_count": 3333242,
+      "shift_start": 92,
+      "type": "residue_orbits"
+    },
+    {
+      "classes": [
+        4,
+        9
+      ],
+      "modulus": 3333333,
+      "shift_count": 1096627,
+      "shift_start": 2236707,
+      "type": "residue_orbits"
+    },
+    {
+      "classes": [
+        5,
+        6
+      ],
+      "modulus": 3333333,
+      "shift_count": 2520732,
+      "shift_start": 0,
+      "type": "residue_orbits"
+    },
+    {
+      "classes": [
+        5,
+        7
+      ],
+      "type": "complete"
+    },
+    {
+      "classes": [
+        5,
+        8
+      ],
+      "modulus": 3333333,
+      "shift_count": 1096627,
+      "shift_start": 0,
+      "type": "residue_orbits"
+    },
+    {
+      "classes": [
+        5,
+        9
+      ],
+      "modulus": 3333333,
+      "shift_count": 3333242,
+      "shift_start": 0,
+      "type": "residue_orbits"
+    },
+    {
+      "classes": [
+        6,
+        7
+      ],
+      "modulus": 4161836250483,
+      "shift_count": 3233027101844,
+      "shift_start": 0,
+      "type": "residue_orbits"
+    },
+    {
+      "classes": [
+        6,
+        8
+      ],
+      "type": "complete"
+    },
+    {
+      "classes": [
+        6,
+        9
+      ],
+      "modulus": 3333333,
+      "shift_count": 2659154,
+      "shift_start": 674180,
+      "type": "residue_orbits"
+    },
+    {
+      "classes": [
+        7,
+        8
+      ],
+      "modulus": 3333333,
+      "shift_count": 2659154,
+      "shift_start": 0,
+      "type": "residue_orbits"
+    },
+    {
+      "classes": [
+        7,
+        9
+      ],
+      "type": "complete"
+    },
+    {
+      "classes": [
+        8,
+        9
+      ],
+      "modulus": 446666622,
+      "shift_count": 146955184,
+      "shift_start": 0,
+      "type": "residue_orbits"
+    }
+  ],
+  "description": "Finite simple unweighted reflection graph with clique fibers and consecutive residue-orbit cross blocks.",
+  "edge_rule": {
+    "modulus": "gcd(size_i,size_j)",
+    "residue_orbits": "For block i<j, u in i and v in j are adjacent iff (v-u-shift_start) mod modulus < shift_count."
+  },
+  "equilibrium": {
+    "angle_seed": [
+      "0.78267532652767924",
+      "2.1776845702977146",
+      "2.3895263130374671",
+      "2.4195110413093768",
+      "2.4494953282570204"
+    ],
+    "parameterization": "phases=[theta1,-theta1,...,thetam,-thetam]"
+  },
+  "reflection": {
+    "class_involution": [
+      1,
+      0,
+      3,
+      2,
+      5,
+      4,
+      7,
+      6,
+      9,
+      8
+    ],
+    "local_label_involution": "u -> (-u) mod class_size",
+    "orientation_rule": "For every two-block reflection orbit, one interval starts at 1-count and its reflected interval starts at 0."
+  },
+  "schema": "reflection-paired-circulant-witness-v2",
+  "source_weighted_record": {
+    "angles": [
+      0.7823888127844473,
+      2.177368307399198,
+      2.389257532725036,
+      2.4192575327247448,
+      2.4492575327244452
+    ],
+    "m": 5,
+    "margins": {
+      "lifted_even": 0.00010000000009346293,
+      "odd": 9.999999990222782e-05,
+      "transverse": 0.24020371863886797
+    },
+    "masses": [
+      0.23598798807259963,
+      0.07668929612028197,
+      2e-05,
+      0.18728271580711806,
+      2.000000000057725e-05
+    ],
+    "name": "m5_gamma_1e-04",
+    "opposite": [
+      [
+        1.0,
+        2.6805981524871287e-15,
+        1.3987829783371294e-16,
+        2.003477080895502e-15,
+        5.961710846868088e-17
+      ],
+      [
+        2.6805981524871287e-15,
+        0.019631989156139666,
+        1.0,
+        0.9999999999999991,
+        1.0
+      ],
+      [
+        1.3987829783371294e-16,
+        1.0,
+        0.3289935336655302,
+        0.7562194466656463,
+        0.32898795591384394
+      ],
+      [
+        2.003477080895502e-15,
+        0.9999999999999991,
+        0.7562194466656463,
+        0.776827079986272,
+        0.7977461468920071
+      ],
+      [
+        5.961710846868088e-17,
+        1.0,
+        0.32898795591384394,
+        0.7977461468920071,
+        0.3290041742766098
+      ]
+    ],
+    "rho": 0.6888282792369392,
+    "same": [
+      [
+        0.0,
+        1.0,
+        0.8749893673753052,
+        0.858558981242352,
+        0.8420333111233184
+      ],
+      [
+        1.0,
+        0.0,
+        0.9999999999999999,
+        1.0,
+        0.9999999999999999
+      ],
+      [
+        0.8749893673753052,
+        0.9999999999999999,
+        0.0,
+        1.0,
+        0.9999724976087712
+      ],
+      [
+        0.858558981242352,
+        1.0,
+        1.0,
+        0.0,
+        1.0
+      ],
+      [
+        0.8420333111233184,
+        0.9999999999999999,
+        0.9999724976087712,
+        1.0,
+        0.0
+      ]
+    ]
+  },
+  "target_prior_ratio": {
+    "denominator": 80001,
+    "numerator": 55018
+  },
+  "vertex_count": 22222217777778,
+  "within_class": {
+    "self_loops": false,
+    "type": "clique"
+  }
+}

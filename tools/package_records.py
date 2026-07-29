@@ -188,6 +188,55 @@ def approach_156_records(source_root: Path) -> list[dict]:
     return records
 
 
+def approach_158_records(source_root: Path) -> list[dict]:
+    root = source_root / "approach_158_reflection_pair_expansion"
+    audit_root = source_root / "approach_162_independent_069152271_audit"
+    ledger = read_json(root / "artifacts" / "finite" / "certified_records.json")
+    records = []
+    strongest_spec = Path(ledger["strongest"]["graph_spec"])
+    for row in ledger["records"]:
+        spec = Path(row["graph_spec"])
+        independently_confirmed = (
+            spec.resolve() == strongest_spec.resolve()
+            and (audit_root / "verdict.json").exists()
+        )
+        records.append(
+            {
+                "source_approach": 158,
+                "architecture": (
+                    "four-pair" if row["source_name"].startswith("m4") else "five-pair"
+                ),
+                "n": int(row["vertex_count"]),
+                "degree": int(row["mu_exact"].split("/")[0]),
+                "mu": Fraction(row["mu_exact"]),
+                "status": (
+                    "CONFIRMED" if independently_confirmed else "CERTIFIED_REPLAY"
+                ),
+                "audit_status": (
+                    "independent_1024bit_arb_audit"
+                    if independently_confirmed
+                    else "producer_interval_replay"
+                ),
+                "spec": spec,
+                "verifier_kind": "expanded-reflection",
+                "report": Path(row["certificate"]),
+                "audit": (
+                    audit_root / "verdict.json"
+                    if independently_confirmed
+                    else None
+                ),
+                "audit_report": (
+                    audit_root / "AUDIT_REPORT.md"
+                    if independently_confirmed
+                    else None
+                ),
+                "formal": None,
+                "nonlinear": None,
+            }
+        )
+    return records
+
+
 def package_verifier(record: dict, target: Path, source_root: Path) -> str:
     kind = record["verifier_kind"]
     if kind == "first":
@@ -226,6 +275,15 @@ def package_verifier(record: dict, target: Path, source_root: Path) -> str:
         )
         shutil.copy2(source, target / "verify.py")
         return "python3 verify.py --spec graph_spec.json --out verification_report.json"
+    if kind == "expanded-reflection":
+        source = (
+            source_root
+            / "approach_158_reflection_pair_expansion"
+            / "scripts"
+            / "replay_record.py"
+        )
+        shutil.copy2(source, target / "verify.py")
+        return "python3 verify.py --spec graph_spec.json --output verification_report.json"
     raise ValueError(kind)
 
 
@@ -336,6 +394,7 @@ def main() -> None:
         first_records(source_root)
         + approach_155_records(source_root)
         + approach_156_records(source_root)
+        + approach_158_records(source_root)
     )
     records.sort(key=lambda row: row["mu"])
     used = set()

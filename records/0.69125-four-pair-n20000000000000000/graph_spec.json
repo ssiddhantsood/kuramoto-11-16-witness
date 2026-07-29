@@ -1,0 +1,679 @@
+{
+  "classes": [
+    {
+      "id": 0,
+      "label": "P1",
+      "reflection_pair": 1,
+      "reflection_sign": 1,
+      "size": 4733055200000000
+    },
+    {
+      "id": 1,
+      "label": "M1",
+      "reflection_pair": 1,
+      "reflection_sign": -1,
+      "size": 4733055200000000
+    },
+    {
+      "id": 2,
+      "label": "P2",
+      "reflection_pair": 2,
+      "reflection_sign": 1,
+      "size": 1441957500000000
+    },
+    {
+      "id": 3,
+      "label": "M2",
+      "reflection_pair": 2,
+      "reflection_sign": -1,
+      "size": 1441957500000000
+    },
+    {
+      "id": 4,
+      "label": "P3",
+      "reflection_pair": 3,
+      "reflection_sign": 1,
+      "size": 3824587300000000
+    },
+    {
+      "id": 5,
+      "label": "M3",
+      "reflection_pair": 3,
+      "reflection_sign": -1,
+      "size": 3824587300000000
+    },
+    {
+      "id": 6,
+      "label": "P4",
+      "reflection_pair": 4,
+      "reflection_sign": 1,
+      "size": 400000000000
+    },
+    {
+      "id": 7,
+      "label": "M4",
+      "reflection_pair": 4,
+      "reflection_sign": -1,
+      "size": 400000000000
+    }
+  ],
+  "construction_screen": {
+    "accepted_float_screen": true,
+    "angles": [
+      0.7827256770485324,
+      2.1841185753312167,
+      2.4124822356936297,
+      2.442486888989599
+    ],
+    "beats_prior_exactly": true,
+    "class_degrees": [
+      14225504216105803,
+      14225504216105803,
+      13824987347330552,
+      13824987347330552,
+      13824987371291307,
+      13824987371291307,
+      13824987343133142,
+      13824987343133142
+    ],
+    "edge_count": 140145542013388259684266700000000,
+    "mass_denominator": 100000000,
+    "mass_weights": [
+      47330552,
+      14419575,
+      38245873,
+      4000
+    ],
+    "minimum_degree": 13824987343133142,
+    "mu_exact": "13824987343133142/19999999999999999",
+    "mu_float": 0.6912493671566571,
+    "orbit_scale": 100000000,
+    "pair_sizes": [
+      4733055200000000,
+      1441957500000000,
+      3824587300000000,
+      400000000000
+    ],
+    "quotient": {
+      "full": [
+        3.6337713437209485e-18,
+        8.932550500925349e-06,
+        1.002433165406667e-05,
+        0.005237578128027936,
+        0.25626116006514627,
+        0.25874518917706946,
+        0.25875086482503334,
+        0.2873800171412813
+      ],
+      "lifted_even": [
+        8.932550501242326e-06,
+        0.2562611600651463,
+        0.2587508648250334,
+        2.0
+      ],
+      "normalized_gap": 8.932550501242326e-06,
+      "odd": [
+        1.0024331654099133e-05,
+        0.005237578128027895,
+        0.25874518917706946,
+        0.2873800171412814
+      ]
+    },
+    "root_converged": true,
+    "rounding_policy": "ceil",
+    "source_name": "m4_gamma_1e-05",
+    "torque_residual_normalized": 1.7832742065980246e-17,
+    "transverse": {
+      "comparison_eigenvalues": [
+        0.24009021950561057,
+        0.2401745023198052,
+        0.25360092266792883,
+        0.2587473256644042,
+        0.25874861924432097,
+        0.2626604713394656,
+        0.2761858527385891,
+        0.27618585273858925
+      ],
+      "covered_transverse_dimensions": 19999999999999992,
+      "fractional_blocks": [
+        {
+          "classes": [
+            0,
+            1
+          ],
+          "count": 4733055199999996,
+          "modulus": 4733055200000000,
+          "normalized_weighted_norm_upper": 1.0689894496036983e-18,
+          "normalized_zero_sum_norm_upper": 2e-16
+        },
+        {
+          "classes": [
+            0,
+            3
+          ],
+          "count": 1,
+          "modulus": 100000000,
+          "normalized_weighted_norm_upper": 1.2863287224498068e-09,
+          "normalized_zero_sum_norm_upper": 1.3062220756397054e-09
+        },
+        {
+          "classes": [
+            0,
+            4
+          ],
+          "count": 86730820,
+          "modulus": 100000000,
+          "normalized_weighted_norm_upper": 0.0016633540259065002,
+          "normalized_zero_sum_norm_upper": 0.028227808588217263
+        },
+        {
+          "classes": [
+            0,
+            5
+          ],
+          "count": 1,
+          "modulus": 100000000,
+          "normalized_weighted_norm_upper": 2.1242643880944647e-09,
+          "normalized_zero_sum_norm_upper": 2.1273212503121714e-09
+        },
+        {
+          "classes": [
+            0,
+            6
+          ],
+          "count": 680673068,
+          "modulus": 800000000,
+          "normalized_weighted_norm_upper": 2.8831341807537625e-05,
+          "normalized_zero_sum_norm_upper": 0.00032450341564993284
+        },
+        {
+          "classes": [
+            0,
+            7
+          ],
+          "count": 1,
+          "modulus": 800000000,
+          "normalized_weighted_norm_upper": 2.709946197310782e-12,
+          "normalized_zero_sum_norm_upper": 2.719448243670028e-12
+        },
+        {
+          "classes": [
+            1,
+            2
+          ],
+          "count": 1,
+          "modulus": 100000000,
+          "normalized_weighted_norm_upper": 1.2863287224498068e-09,
+          "normalized_zero_sum_norm_upper": 1.3062220756397054e-09
+        },
+        {
+          "classes": [
+            1,
+            4
+          ],
+          "count": 1,
+          "modulus": 100000000,
+          "normalized_weighted_norm_upper": 2.1242643880944647e-09,
+          "normalized_zero_sum_norm_upper": 2.1273212503121714e-09
+        },
+        {
+          "classes": [
+            1,
+            5
+          ],
+          "count": 86730820,
+          "modulus": 100000000,
+          "normalized_weighted_norm_upper": 0.0016633540259065002,
+          "normalized_zero_sum_norm_upper": 0.028227808588217263
+        },
+        {
+          "classes": [
+            1,
+            6
+          ],
+          "count": 1,
+          "modulus": 800000000,
+          "normalized_weighted_norm_upper": 2.709946197310782e-12,
+          "normalized_zero_sum_norm_upper": 2.719448243670028e-12
+        },
+        {
+          "classes": [
+            1,
+            7
+          ],
+          "count": 680673068,
+          "modulus": 800000000,
+          "normalized_weighted_norm_upper": 2.8831341807537625e-05,
+          "normalized_zero_sum_norm_upper": 0.00032450341564993284
+        },
+        {
+          "classes": [
+            2,
+            3
+          ],
+          "count": 1,
+          "modulus": 1441957500000000,
+          "normalized_weighted_norm_upper": 1.6869918173367764e-17,
+          "normalized_zero_sum_norm_upper": 5e-17
+        },
+        {
+          "classes": [
+            4,
+            5
+          ],
+          "count": 3010744369784116,
+          "modulus": 3824587300000000,
+          "normalized_weighted_norm_upper": 0.004571268613326876,
+          "normalized_zero_sum_norm_upper": 0.0406921465107942
+        },
+        {
+          "classes": [
+            4,
+            7
+          ],
+          "count": 80767041,
+          "modulus": 100000000,
+          "normalized_weighted_norm_upper": 5.344720235954253e-05,
+          "normalized_zero_sum_norm_upper": 0.00037613036470098774
+        },
+        {
+          "classes": [
+            5,
+            6
+          ],
+          "count": 80767041,
+          "modulus": 100000000,
+          "normalized_weighted_norm_upper": 5.344720235954253e-05,
+          "normalized_zero_sum_norm_upper": 0.00037613036470098774
+        },
+        {
+          "classes": [
+            6,
+            7
+          ],
+          "count": 39548339,
+          "modulus": 400000000000,
+          "normalized_weighted_norm_upper": 3.3958046461370136e-10,
+          "normalized_zero_sum_norm_upper": 1.97741695e-09
+        }
+      ],
+      "normalized_beta": [
+        0.24029826364608614,
+        0.24029826364608614,
+        0.276185852738589,
+        0.276185852738589,
+        0.2579646889077559,
+        0.2579646889077559,
+        0.25874807781692566,
+        0.25874807781692566
+      ],
+      "normalized_lower_bound": 0.24009021950561057,
+      "proof": "Block comparison on the direct sum of classwise zero-sum spaces. Complete blocks vanish. For a consecutive interval of k residues modulo g, use the complement when k>g/2 and |sum exp(iqh)| <= min(min(k,g-k),1/sin(pi/g))."
+    },
+    "vertex_count": 20000000000000000,
+    "weyl_lipschitz": {
+      "finite_margin": 8.932550501242326e-06,
+      "fixed_phase_lifted_even_norm_difference": 4.495120471562765e-05,
+      "maximum_angle_motion": 9.639895246227326e-05,
+      "source_margin": 9.999998957335402e-06
+    }
+  },
+  "cross_blocks": [
+    {
+      "classes": [
+        0,
+        1
+      ],
+      "modulus": 4733055200000000,
+      "shift_count": 4733055199999996,
+      "shift_start": 0,
+      "type": "residue_orbits"
+    },
+    {
+      "classes": [
+        0,
+        2
+      ],
+      "type": "complete"
+    },
+    {
+      "classes": [
+        0,
+        3
+      ],
+      "modulus": 100000000,
+      "shift_count": 1,
+      "shift_start": 0,
+      "type": "residue_orbits"
+    },
+    {
+      "classes": [
+        0,
+        4
+      ],
+      "modulus": 100000000,
+      "shift_count": 86730820,
+      "shift_start": 13269181,
+      "type": "residue_orbits"
+    },
+    {
+      "classes": [
+        0,
+        5
+      ],
+      "modulus": 100000000,
+      "shift_count": 1,
+      "shift_start": 0,
+      "type": "residue_orbits"
+    },
+    {
+      "classes": [
+        0,
+        6
+      ],
+      "modulus": 800000000,
+      "shift_count": 680673068,
+      "shift_start": 119326933,
+      "type": "residue_orbits"
+    },
+    {
+      "classes": [
+        0,
+        7
+      ],
+      "modulus": 800000000,
+      "shift_count": 1,
+      "shift_start": 0,
+      "type": "residue_orbits"
+    },
+    {
+      "classes": [
+        1,
+        2
+      ],
+      "modulus": 100000000,
+      "shift_count": 1,
+      "shift_start": 0,
+      "type": "residue_orbits"
+    },
+    {
+      "classes": [
+        1,
+        3
+      ],
+      "type": "complete"
+    },
+    {
+      "classes": [
+        1,
+        4
+      ],
+      "modulus": 100000000,
+      "shift_count": 1,
+      "shift_start": 0,
+      "type": "residue_orbits"
+    },
+    {
+      "classes": [
+        1,
+        5
+      ],
+      "modulus": 100000000,
+      "shift_count": 86730820,
+      "shift_start": 0,
+      "type": "residue_orbits"
+    },
+    {
+      "classes": [
+        1,
+        6
+      ],
+      "modulus": 800000000,
+      "shift_count": 1,
+      "shift_start": 0,
+      "type": "residue_orbits"
+    },
+    {
+      "classes": [
+        1,
+        7
+      ],
+      "modulus": 800000000,
+      "shift_count": 680673068,
+      "shift_start": 0,
+      "type": "residue_orbits"
+    },
+    {
+      "classes": [
+        2,
+        3
+      ],
+      "modulus": 1441957500000000,
+      "shift_count": 1,
+      "shift_start": 0,
+      "type": "residue_orbits"
+    },
+    {
+      "classes": [
+        2,
+        4
+      ],
+      "type": "complete"
+    },
+    {
+      "classes": [
+        2,
+        5
+      ],
+      "type": "complete"
+    },
+    {
+      "classes": [
+        2,
+        6
+      ],
+      "type": "complete"
+    },
+    {
+      "classes": [
+        2,
+        7
+      ],
+      "type": "complete"
+    },
+    {
+      "classes": [
+        3,
+        4
+      ],
+      "type": "complete"
+    },
+    {
+      "classes": [
+        3,
+        5
+      ],
+      "type": "complete"
+    },
+    {
+      "classes": [
+        3,
+        6
+      ],
+      "type": "complete"
+    },
+    {
+      "classes": [
+        3,
+        7
+      ],
+      "type": "complete"
+    },
+    {
+      "classes": [
+        4,
+        5
+      ],
+      "modulus": 3824587300000000,
+      "shift_count": 3010744369784116,
+      "shift_start": 0,
+      "type": "residue_orbits"
+    },
+    {
+      "classes": [
+        4,
+        6
+      ],
+      "type": "complete"
+    },
+    {
+      "classes": [
+        4,
+        7
+      ],
+      "modulus": 100000000,
+      "shift_count": 80767041,
+      "shift_start": 19232960,
+      "type": "residue_orbits"
+    },
+    {
+      "classes": [
+        5,
+        6
+      ],
+      "modulus": 100000000,
+      "shift_count": 80767041,
+      "shift_start": 0,
+      "type": "residue_orbits"
+    },
+    {
+      "classes": [
+        5,
+        7
+      ],
+      "type": "complete"
+    },
+    {
+      "classes": [
+        6,
+        7
+      ],
+      "modulus": 400000000000,
+      "shift_count": 39548339,
+      "shift_start": 0,
+      "type": "residue_orbits"
+    }
+  ],
+  "description": "Finite simple unweighted reflection graph with clique fibers and consecutive residue-orbit cross blocks.",
+  "edge_rule": {
+    "modulus": "gcd(size_i,size_j)",
+    "residue_orbits": "For block i<j, u in i and v in j are adjacent iff (v-u-shift_start) mod modulus < shift_count."
+  },
+  "equilibrium": {
+    "angle_seed": [
+      "0.78272567704853235",
+      "2.1841185753312167",
+      "2.4124822356936297",
+      "2.442486888989599"
+    ],
+    "parameterization": "phases=[theta1,-theta1,...,thetam,-thetam]"
+  },
+  "reflection": {
+    "class_involution": [
+      1,
+      0,
+      3,
+      2,
+      5,
+      4,
+      7,
+      6
+    ],
+    "local_label_involution": "u -> (-u) mod class_size",
+    "orientation_rule": "For every two-block reflection orbit, one interval starts at 1-count and its reflected interval starts at 0."
+  },
+  "schema": "reflection-paired-circulant-witness-v2",
+  "source_weighted_record": {
+    "angles": [
+      0.7828086377783214,
+      2.184214974283679,
+      2.412560772226089,
+      2.4425607722232794
+    ],
+    "m": 4,
+    "margins": {
+      "lifted_even": 1.0000001017718364e-05,
+      "odd": 9.999998957335402e-06,
+      "transverse": 0.2402587782390106
+    },
+    "masses": [
+      0.23665275955008272,
+      0.07209787488205911,
+      0.19122936556785874,
+      2e-05
+    ],
+    "name": "m4_gamma_1e-05",
+    "opposite": [
+      [
+        0.9999999999999992,
+        5.799758343383845e-16,
+        1.0978016732896465e-15,
+        8.485679547709183e-17
+      ],
+      [
+        5.799758343383845e-16,
+        5.91005874771979e-23,
+        1.0,
+        0.999999999999999
+      ],
+      [
+        1.0978016732896465e-15,
+        1.0,
+        0.7872076471581956,
+        0.8076704025854833
+      ],
+      [
+        8.485679547709183e-17,
+        0.999999999999999,
+        0.8076704025854833,
+        9.887084719434284e-05
+      ]
+    ],
+    "rho": 0.6912493655678583,
+    "same": [
+      [
+        0.0,
+        1.0,
+        0.8673081956949016,
+        0.8508413338044899
+      ],
+      [
+        1.0,
+        0.0,
+        1.0,
+        0.9999999999999994
+      ],
+      [
+        0.8673081956949016,
+        1.0,
+        0.0,
+        0.9999999999999999
+      ],
+      [
+        0.8508413338044899,
+        0.9999999999999994,
+        0.9999999999999999,
+        0.0
+      ]
+    ]
+  },
+  "target_prior_ratio": {
+    "denominator": 80001,
+    "numerator": 55018
+  },
+  "vertex_count": 20000000000000000,
+  "within_class": {
+    "self_loops": false,
+    "type": "clique"
+  }
+}
