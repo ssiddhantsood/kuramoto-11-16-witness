@@ -1,0 +1,21 @@
+{
+  "schema": "independent-witness-audit-verdict-v1",
+  "verdict": "CONFIRMED",
+  "input_spec_sha256": "03ed576a456da292bb86aa9b6c01e3d0fb531e600d3650671b2812593be74c38",
+  "exact_mu": "316802/460799",
+  "threshold_integer_margin": 43,
+  "maximum_stored_phase_torque_residual": "1.290941837506996600363365555621064148368174378583820968199394062729637186096360237078990796058520741e-85",
+  "maximum_refined_phase_torque_residual": "1.602377891468794417503918329493989691623851306261806168691146516899786371792408229576131324109466911e-156",
+  "quotient_gap": "48.74396396824601315537492443447259567941172662449301687831516526860465273067670072872017888326243683",
+  "quotient_gap_normalized": "0.0001057811718060894382712129436511992093737233650705143595449547857391594026273365901230906659793021633",
+  "transverse_minimum": "111089.5637903686767790796595086878455923727931305935026839240331074523244284029171930483020090610030",
+  "transverse_minimum_character": 4724,
+  "transverse_conjugate_character": 1,
+  "mode_count_identity": "6 + 460794 = 460800",
+  "nonlinear_verdict": "LOCAL_RETURN_CONFIRMED_WITH_FINITE_BASIN_ESCAPE",
+  "discrepancy": {
+    "severity": "non_material_reporting_discrepancy",
+    "field": "maximum_per_vertex_torque_residual",
+    "explanation": "The original summary residual used an unprinted Newton-refined phase vector rather than the printed decimal strings. Independent refinement confirms the same nearby root."
+  }
+}

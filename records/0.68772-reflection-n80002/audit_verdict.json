@@ -1,0 +1,78 @@
+{
+  "schema": "independent-reflection-witness-audit-v1",
+  "verdict": "CONFIRMED",
+  "scope": "Record claim confirmed as a nonsynchronous strict local minimum modulo rotation.",
+  "graph_spec_sha256": "5dca79605da2e0eeff844f39f5d1901ed77778c105d6fba1f92687e82f54bf9f",
+  "metrics": {
+    "vertex_count": 80002,
+    "class_sizes": [
+      14133,
+      14133,
+      7024,
+      7024,
+      18844,
+      18844
+    ],
+    "class_degrees": [
+      55021,
+      55021,
+      55018,
+      55018,
+      56684,
+      56684
+    ],
+    "edge_count": 2232211521,
+    "minimum_degree": 55018,
+    "minimum_degree_ratio_exact": "55018/80001",
+    "minimum_degree_ratio_decimal": "0.687716403544955688053899326258",
+    "cross_product_excess_over_11_16": 277,
+    "order_parameter": "0.033299484255493484451797961062902392051734539179723",
+    "root_max_torque_residual": "8.4425425152863545697593412856956224e-227",
+    "root_uniqueness_box_radius_about_short_seed": "1e-10",
+    "root_uniqueness_scope": "unique within the certified short-seed box",
+    "quotient_absolute_gap": "0.426830959136869470024095250743114461247250295",
+    "quotient_normalized_gap": "0.00000533525360787067160851097785984243470472301061",
+    "quotient_rigorous_absolute_lower": "0.426816432289152643011290395041570174975169450",
+    "quotient_rigorous_normalized_lower": "0.00000533507202681373769419877496864541105191332029",
+    "exactly_one_rotation_zero": true,
+    "transverse_mode_count": 79996,
+    "transverse_positive_mode_count": 79996,
+    "transverse_enumerated_minimum": 19244.984787192374,
+    "transverse_fourier_free_rigorous_lower": "17725.8475295004827785305678844",
+    "nonlinear_verdict": "LOCAL RETURN CONFIRMED; BASIN SIZE NOT CERTIFIED"
+  },
+  "acceptance": {
+    "simple_connected_unweighted_graph": true,
+    "reflection_automorphism_exact": true,
+    "minimum_degree_ratio_strictly_above_11_16": true,
+    "equilibrium_interval_certified": true,
+    "normalized_quotient_gap_rigorously_above_1e_minus_6": true,
+    "exactly_one_rotation_zero": true,
+    "all_79996_transverse_modes_positive": true,
+    "independent_fourier_free_transverse_proof": true,
+    "local_nonlinear_return": true
+  },
+  "qualifications": [
+    "Root uniqueness is local to the certified short-seed box. Global uniqueness is false because the unrestricted torque equations also have synchronous roots.",
+    "Weakest-mode perturbations of 0.0001 and 0.0003 radians returned in both signs.",
+    "Weakest-mode perturbations of 0.0005 and 0.002 radians escaped to synchrony in both signs, so the weak-direction basin is narrow.",
+    "Random full-graph perturbations with vertexwise amplitudes through 0.01 returned because their projection onto the weak quotient mode was much smaller.",
+    "No global-attraction claim or explicit rigorous nonlinear basin radius is made."
+  ],
+  "comparison_to_first_witness": {
+    "first_vertex_count": 460800,
+    "current_vertex_count": 80002,
+    "vertex_count_reduction_fraction": 0.8263845486111111,
+    "first_mu_exact": "316802/460799",
+    "current_mu_exact": "55018/80001",
+    "exact_mu_improvement": "7762580/36864380799",
+    "first_normalized_quotient_gap": "0.00010578117180608943827121294365119920937372336507051",
+    "current_normalized_quotient_gap": "0.00000533525360787067160851097785984243470472301061"
+  },
+  "artifacts": {
+    "graph_spec": "graph_spec.json",
+    "verifier": "verify.py",
+    "verification_report": "verification_report.json",
+    "documentation": "README.md"
+  }
+}

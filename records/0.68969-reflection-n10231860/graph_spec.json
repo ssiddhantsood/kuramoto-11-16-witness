@@ -1,0 +1,294 @@
+{
+  "schema": "reflection-paired-circulant-witness-v1",
+  "description": "Exact six-class record from the density/stability Pareto search; clique fibers and deterministic cyclic-shift biregular blocks.",
+  "vertex_count": 10231860,
+  "target_min_degree_ratio": {
+    "numerator": 11,
+    "denominator": 16
+  },
+  "classes": [
+    {
+      "id": 0,
+      "label": "P1",
+      "reflection_pair": 1,
+      "reflection_sign": 1,
+      "size": 1944535
+    },
+    {
+      "id": 1,
+      "label": "M1",
+      "reflection_pair": 1,
+      "reflection_sign": -1,
+      "size": 1944535
+    },
+    {
+      "id": 2,
+      "label": "P2",
+      "reflection_pair": 2,
+      "reflection_sign": 1,
+      "size": 753865
+    },
+    {
+      "id": 3,
+      "label": "M2",
+      "reflection_pair": 2,
+      "reflection_sign": -1,
+      "size": 753865
+    },
+    {
+      "id": 4,
+      "label": "P3",
+      "reflection_pair": 3,
+      "reflection_sign": 1,
+      "size": 2417530
+    },
+    {
+      "id": 5,
+      "label": "M3",
+      "reflection_pair": 3,
+      "reflection_sign": -1,
+      "size": 2417530
+    }
+  ],
+  "reflection": {
+    "class_involution": [
+      1,
+      0,
+      3,
+      2,
+      5,
+      4
+    ],
+    "local_label_involution": "u -> (-u) mod class_size"
+  },
+  "within_class": {
+    "type": "clique",
+    "self_loops": false
+  },
+  "cross_blocks": [
+    {
+      "classes": [
+        0,
+        1
+      ],
+      "type": "residue_orbits",
+      "modulus": 1944535,
+      "shift_start": 0,
+      "shift_count": 1518444
+    },
+    {
+      "classes": [
+        0,
+        2
+      ],
+      "type": "complete"
+    },
+    {
+      "classes": [
+        0,
+        3
+      ],
+      "type": "complete"
+    },
+    {
+      "classes": [
+        0,
+        4
+      ],
+      "type": "residue_orbits",
+      "modulus": 52555,
+      "shift_start": 7206,
+      "shift_count": 45350
+    },
+    {
+      "classes": [
+        0,
+        5
+      ],
+      "type": "absent"
+    },
+    {
+      "classes": [
+        1,
+        2
+      ],
+      "type": "complete"
+    },
+    {
+      "classes": [
+        1,
+        3
+      ],
+      "type": "complete"
+    },
+    {
+      "classes": [
+        1,
+        4
+      ],
+      "type": "absent"
+    },
+    {
+      "classes": [
+        1,
+        5
+      ],
+      "type": "residue_orbits",
+      "modulus": 52555,
+      "shift_start": 0,
+      "shift_count": 45350
+    },
+    {
+      "classes": [
+        2,
+        3
+      ],
+      "type": "absent"
+    },
+    {
+      "classes": [
+        2,
+        4
+      ],
+      "type": "absent"
+    },
+    {
+      "classes": [
+        2,
+        5
+      ],
+      "type": "complete"
+    },
+    {
+      "classes": [
+        3,
+        4
+      ],
+      "type": "complete"
+    },
+    {
+      "classes": [
+        3,
+        5
+      ],
+      "type": "absent"
+    },
+    {
+      "classes": [
+        4,
+        5
+      ],
+      "type": "complete"
+    }
+  ],
+  "edge_rule": {
+    "local_vertex_labels": "Each class is labeled 0,...,size-1.",
+    "residue_orbits": "For i<j, u in i and v in j are adjacent iff (v-u-shift_start) mod modulus < shift_count.",
+    "interpretation": "Every modulus is gcd(size_i,size_j), hence each listed residue block is simple and exactly biregular."
+  },
+  "equilibrium": {
+    "parameterization": "phases=[theta1,-theta1,theta2,-theta2,theta3,-theta3]",
+    "angle_seed": [
+      "-0.726443410967821",
+      "0.96013633670038",
+      "-2.3588280866421134"
+    ],
+    "angle_strings": [
+      "-0.7264434109676841413840702569448146512056615679286993374796434871532316456580660774843824584624895858",
+      "0.9601363367002087438596779940817004993622283232476635388149927921575100429545973670894573215947442064",
+      "-2.358828086641951976648713084924496623859786864333583533225171089331783333716252721195136980484814963"
+    ],
+    "phase_strings": [
+      "-0.7264434109676841413840702569448146512056615679286993374796434871532316456580660774843824584624895858",
+      "0.7264434109676841413840702569448146512056615679286993374796434871532316456580660774843824584624895858",
+      "0.9601363367002087438596779940817004993622283232476635388149927921575100429545973670894573215947442064",
+      "-0.9601363367002087438596779940817004993622283232476635388149927921575100429545973670894573215947442064",
+      "-2.358828086641951976648713084924496623859786864333583533225171089331783333716252721195136980484814963",
+      "2.358828086641951976648713084924496623859786864333583533225171089331783333716252721195136980484814963"
+    ],
+    "construction_torque_residual": "0.0",
+    "phase_assignment": "Every vertex in class c receives phase phase_strings[c]."
+  },
+  "construction": {
+    "weighted_record": "target_0.690",
+    "weighted_rho": 0.69,
+    "weighted_quotient_gap": 5.4071152476663156e-05,
+    "reported_integer_candidate": {
+      "pair_sizes": [
+        1944535,
+        753865,
+        2417530
+      ],
+      "class_sizes": [
+        1944535,
+        1944535,
+        753865,
+        753865,
+        2417530,
+        2417530
+      ],
+      "vertex_count": 10231860,
+      "own_counts": [
+        1518444,
+        0,
+        2417530
+      ],
+      "same_counts": [
+        5,
+        45350,
+        0
+      ],
+      "opposite_counts": [
+        5,
+        0,
+        5
+      ],
+      "angles": [
+        -0.726443410967821,
+        0.96013633670038,
+        -2.3588280866421134
+      ],
+      "torque_residual": 4.656612873077393e-10,
+      "class_degrees": [
+        7056808,
+        7056808,
+        7060464,
+        7060464,
+        7266874,
+        7266874
+      ],
+      "minimum_degree": 7056808,
+      "mu_numerator": 7056808,
+      "mu_denominator": 10231859,
+      "mu_float": 0.6896897230503274,
+      "spectral": {
+        "normalized_quotient_lifted_eigenvalues": [
+          2.9051721936415942e-05,
+          8.300869749242435e-05,
+          0.005539654329625404,
+          0.2564996052165676,
+          0.288310327766157,
+          2.0000000000000004
+        ],
+        "normalized_quotient_gap": 2.9051721936415942e-05,
+        "normalized_transverse_comparison_eigenvalues": [
+          0.23980511331537566,
+          0.23990510244548358,
+          0.2534591832333157,
+          0.26315679645150114,
+          0.2770677261430513,
+          0.2770677261430513
+        ],
+        "normalized_transverse_comparison_gap": 0.23980511331537566,
+        "fiber_diagonal_terms": [
+          2641044.321793389,
+          2641044.321793389,
+          2834918.184414042,
+          2834918.184414042,
+          2456090.751273009,
+          2456090.751273009
+        ]
+      }
+    }
+  }
+}

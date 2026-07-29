@@ -1,0 +1,93 @@
+{
+  "schema": "six-class-circulant-witness-v1",
+  "description": "Simple unweighted graph specified by clique fibers and consecutive residue-orbit bipartite blocks.",
+  "vertex_count": 460800,
+  "target_min_degree_ratio": {
+    "numerator": 11,
+    "denominator": 16
+  },
+  "classes": [
+    {"id": 0, "size": 80325},
+    {"id": 1, "size": 80325},
+    {"id": 2, "size": 108675},
+    {"id": 3, "size": 108675},
+    {"id": 4, "size": 41400},
+    {"id": 5, "size": 41400}
+  ],
+  "within_class": {
+    "type": "clique",
+    "self_loops": false
+  },
+  "cross_blocks": [
+    {
+      "classes": [0, 1],
+      "type": "residue_orbits",
+      "modulus": 80325,
+      "shift_start": 0,
+      "shift_count": 62010
+    },
+    {
+      "classes": [0, 2],
+      "type": "residue_orbits",
+      "modulus": 4725,
+      "shift_start": 0,
+      "shift_count": 3987
+    },
+    {"classes": [0, 3], "type": "absent"},
+    {"classes": [0, 4], "type": "complete"},
+    {"classes": [0, 5], "type": "complete"},
+    {"classes": [1, 2], "type": "absent"},
+    {
+      "classes": [1, 3],
+      "type": "residue_orbits",
+      "modulus": 4725,
+      "shift_start": 0,
+      "shift_count": 3987
+    },
+    {"classes": [1, 4], "type": "complete"},
+    {"classes": [1, 5], "type": "complete"},
+    {
+      "classes": [2, 3],
+      "type": "residue_orbits",
+      "modulus": 108675,
+      "shift_start": 0,
+      "shift_count": 108243
+    },
+    {"classes": [2, 4], "type": "absent"},
+    {"classes": [2, 5], "type": "complete"},
+    {"classes": [3, 4], "type": "complete"},
+    {"classes": [3, 5], "type": "absent"},
+    {
+      "classes": [4, 5],
+      "type": "residue_orbits",
+      "modulus": 41400,
+      "shift_start": 0,
+      "shift_count": 6078
+    }
+  ],
+  "edge_rule": {
+    "local_vertex_labels": "Each class is labeled 0,...,size-1.",
+    "residue_orbits": "For a listed block i<j, connect local vertices u in i and v in j iff (v-u-shift_start) mod modulus is less than shift_count.",
+    "interpretation": "Each selected residue is one simultaneous cyclic-shift orbit. The block is simple and biregular because modulus divides both class sizes."
+  },
+  "equilibrium": {
+    "phase_seed": [
+      "0",
+      "1.40739194",
+      "-1.65671858",
+      "3.06411052",
+      "1.67611840",
+      "-0.26872645"
+    ],
+    "symmetry_parameterization": "phi=[0,s,x+2*pi,s-x,s-y,y], with x represented unwrapped during the solve",
+    "phase_strings": [
+      "0.0",
+      "1.40739194443017506833155213230129895323516278019010739034754292834847506656553860411541657",
+      "4.62646672983856881578133344501694700336215771812440449394807424796221379929814971856979366",
+      "3.06411052177119272947550545384335771826734386081591453834935786500189407983980688280169256",
+      "1.67611839774765744879273111490003861728024311696773947608496059581242384748259552190186609",
+      "-0.268726453317482380461178982598739664045080336777632085737417667463948780917056917786449521"
+    ],
+    "phase_assignment": "Every vertex in class c receives phase phase_strings[c]."
+  }
+}

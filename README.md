@@ -4,6 +4,19 @@ This repository contains compact, reproducible specifications of finite simple
 unweighted graphs whose homogeneous Kuramoto model has a strict
 nonsynchronous equilibrium.
 
+## All finite records
+
+The sorted catalog is in [`records/`](records/README.md). Each numeric folder
+uses the form
+
+```text
+0.68875-reflection-n999962/
+```
+
+and contains a compact graph specification, standardized metadata, a verifier,
+and the available interval, audit, and nonlinear certificates. Audit-pending
+records are labeled explicitly.
+
 ## Current record: N=80,002
 
 The current record is documented in

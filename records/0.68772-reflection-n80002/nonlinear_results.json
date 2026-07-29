@@ -1,0 +1,196 @@
+{
+  "outcome": "PASS",
+  "vertex_count": 80002,
+  "dynamics": "dtheta_i/dt=-(1/N)*sum_j A_ij sin(theta_i-theta_j)",
+  "normalized_quotient_eigenvalues": [
+    1.0423229300571243e-17,
+    5.3352536078659035e-06,
+    0.0002909636679184487,
+    0.007766461562994006,
+    0.25652978856877445,
+    0.2867769545461995
+  ],
+  "normalized_weakest_quotient_rate": 5.3352536078659035e-06,
+  "quotient_integration_time": 4498380.351519968,
+  "weak_mode_time_constants": 24.0,
+  "compact_adjacency_spot_check": {
+    "vertex_count": 510,
+    "maximum_matvec_error": 2.1316282072803006e-14
+  },
+  "weakest_mode_tests": [
+    {
+      "success": true,
+      "function_evaluations": 31759,
+      "time_points": 1329,
+      "final_orbit_error": 6.073024719378172e-14,
+      "final_rotation": 1.8429712686245455e-12,
+      "final_rhs_infinity_norm": 4.547359824869019e-17,
+      "initial_energy": -0.03213591275053468,
+      "final_energy": -0.03213591275053465,
+      "kind": "weakest_quotient_mode",
+      "amplitude": 1e-06,
+      "sign": -1,
+      "initial_orbit_error": 1.0000000000035622e-06
+    },
+    {
+      "success": true,
+      "function_evaluations": 31534,
+      "time_points": 1356,
+      "final_orbit_error": 1.3545067697674293e-13,
+      "final_rotation": 1.3794486401242832e-12,
+      "final_rhs_infinity_norm": 9.094719649738039e-17,
+      "initial_energy": -0.03213591275053468,
+      "final_energy": -0.03213591275053469,
+      "kind": "weakest_quotient_mode",
+      "amplitude": 1e-06,
+      "sign": 1,
+      "initial_orbit_error": 1.0000000000035622e-06
+    },
+    {
+      "success": true,
+      "function_evaluations": 35721,
+      "time_points": 1517,
+      "final_orbit_error": 6.466332487394922e-14,
+      "final_rotation": 6.226614170505529e-13,
+      "final_rhs_infinity_norm": 4.547359824869019e-17,
+      "initial_energy": -0.03213591275053444,
+      "final_energy": -0.03213591275053472,
+      "kind": "weakest_quotient_mode",
+      "amplitude": 1e-05,
+      "sign": -1,
+      "initial_orbit_error": 9.999999999984622e-06
+    },
+    {
+      "success": true,
+      "function_evaluations": 29709,
+      "time_points": 1259,
+      "final_orbit_error": 1.5673320217462543e-13,
+      "final_rotation": -9.393294122328983e-13,
+      "final_rhs_infinity_norm": 4.547359824869019e-17,
+      "initial_energy": -0.03213591275053444,
+      "final_energy": -0.03213591275053469,
+      "kind": "weakest_quotient_mode",
+      "amplitude": 1e-05,
+      "sign": 1,
+      "initial_orbit_error": 9.999999999984622e-06
+    },
+    {
+      "success": true,
+      "function_evaluations": 26542,
+      "time_points": 1149,
+      "final_orbit_error": 1.4566236269962574e-13,
+      "final_rotation": 6.188394157948675e-13,
+      "final_rhs_infinity_norm": 4.547359824869019e-17,
+      "initial_energy": -0.03213591275051203,
+      "final_energy": -0.032135912750534665,
+      "kind": "weakest_quotient_mode",
+      "amplitude": 0.0001,
+      "sign": -1,
+      "initial_orbit_error": 9.999999999384922e-05
+    },
+    {
+      "success": true,
+      "function_evaluations": 27754,
+      "time_points": 1179,
+      "final_orbit_error": 1.1118930497371086e-13,
+      "final_rotation": -1.5633600830684128e-12,
+      "final_rhs_infinity_norm": 9.094719649738039e-17,
+      "initial_energy": -0.03213591275051203,
+      "final_energy": -0.03213591275053472,
+      "kind": "weakest_quotient_mode",
+      "amplitude": 0.0001,
+      "sign": 1,
+      "initial_orbit_error": 9.999999999384922e-05
+    }
+  ],
+  "non_acceptance_basin_stress_tests": [
+    {
+      "success": true,
+      "function_evaluations": 7725,
+      "time_points": 1061,
+      "final_orbit_error": 2.3605175973355883,
+      "final_rotation": -1.4799672999236577,
+      "final_rhs_infinity_norm": 1.1585175252252442e-16,
+      "initial_energy": -0.03213591274826884,
+      "final_energy": -0.25437430003226447,
+      "kind": "weakest_quotient_mode_basin_stress",
+      "amplitude": 0.001,
+      "sign": -1,
+      "initial_orbit_error": 0.0009999999941125797,
+      "returned_to_certified_equilibrium": false
+    },
+    {
+      "success": true,
+      "function_evaluations": 7725,
+      "time_points": 1061,
+      "final_orbit_error": 2.3605175973355914,
+      "final_rotation": 1.4799672999236606,
+      "final_rhs_infinity_norm": 3.0425723950108048e-16,
+      "initial_energy": -0.032135912748268845,
+      "final_energy": -0.25437430003226447,
+      "kind": "weakest_quotient_mode_basin_stress",
+      "amplitude": 0.001,
+      "sign": 1,
+      "initial_orbit_error": 0.0009999999941125797,
+      "returned_to_certified_equilibrium": false
+    }
+  ],
+  "random_full_graph_tests": [
+    {
+      "kind": "full_graph_iid_random",
+      "trial": 0,
+      "rng_seed": 154,
+      "amplitude_rms": 0.001,
+      "full_graph_final_time": 80.0,
+      "rk4_step": 0.5,
+      "rk4_steps": 160,
+      "initial_energy": -0.12652709778138896,
+      "full_stage_final_energy": -0.12652722437592936,
+      "full_stage_rhs_infinity_norm": 2.302199141133198e-08,
+      "within_class_dispersion_max": 1.7462475909724162e-11,
+      "within_class_dispersion_rms": 2.9838546581369094e-12,
+      "class_mean_orbit_error_before_continuation": 6.0526676510097326e-06,
+      "class_mean_continuation": {
+        "success": true,
+        "function_evaluations": 32716,
+        "time_points": 1401,
+        "final_orbit_error": 2.7369820506032244e-13,
+        "final_rotation": -5.652427713268885e-13,
+        "final_rhs_infinity_norm": 4.547359824869019e-17,
+        "initial_energy": -0.03213591275050505,
+        "final_energy": -0.032135912750534665
+      }
+    },
+    {
+      "kind": "full_graph_iid_random",
+      "trial": 1,
+      "rng_seed": 154,
+      "amplitude_rms": 0.01,
+      "full_graph_final_time": 80.0,
+      "rk4_step": 0.5,
+      "rk4_steps": 160,
+      "initial_energy": -0.12651457441015732,
+      "full_stage_final_energy": -0.1265272243754616,
+      "full_stage_rhs_infinity_norm": 5.404308710688668e-08,
+      "within_class_dispersion_max": 1.904019164555848e-10,
+      "within_class_dispersion_rms": 3.008132009078532e-11,
+      "class_mean_orbit_error_before_continuation": 6.558240763522914e-05,
+      "class_mean_continuation": {
+        "success": true,
+        "function_evaluations": 35694,
+        "time_points": 1532,
+        "final_orbit_error": 1.2304443495830035e-13,
+        "final_rotation": -1.0447991646449018e-12,
+        "final_rhs_infinity_norm": 4.547359824869019e-17,
+        "initial_energy": -0.03213591275003752,
+        "final_energy": -0.0321359127505347
+      }
+    }
+  ],
+  "acceptance": {
+    "compact_adjacency_matches_dense_analog": true,
+    "weakest_mode_both_signs_at_1e_6_to_1e_4_return": true,
+    "random_full_graph_perturbations_return": true,
+    "passed": true
+  }
+}

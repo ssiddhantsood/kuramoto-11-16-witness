@@ -1,0 +1,301 @@
+{
+  "schema": "eight-class-bottleneck-split-witness-v1",
+  "description": "Simple unweighted reflection-paired subtype graph with clique fibers and exact consecutive residue-orbit cross blocks.",
+  "vertex_count": 100000000000000000,
+  "classes": [
+    {
+      "id": 0,
+      "size": 19151988000000000
+    },
+    {
+      "id": 1,
+      "size": 23672413000000000
+    },
+    {
+      "id": 2,
+      "size": 3728837500000000
+    },
+    {
+      "id": 3,
+      "size": 3446761500000000
+    },
+    {
+      "id": 4,
+      "size": 19151988000000000
+    },
+    {
+      "id": 5,
+      "size": 23672413000000000
+    },
+    {
+      "id": 6,
+      "size": 3728837500000000
+    },
+    {
+      "id": 7,
+      "size": 3446761500000000
+    }
+  ],
+  "within_class": {
+    "type": "clique",
+    "self_loops": false
+  },
+  "cross_blocks": [
+    {
+      "classes": [
+        0,
+        1
+      ],
+      "type": "residue_orbits",
+      "modulus": 1000000000,
+      "shift_start": 0,
+      "shift_count": 868144719
+    },
+    {
+      "classes": [
+        0,
+        2
+      ],
+      "type": "complete"
+    },
+    {
+      "classes": [
+        0,
+        3
+      ],
+      "type": "complete"
+    },
+    {
+      "classes": [
+        0,
+        4
+      ],
+      "type": "residue_orbits",
+      "modulus": 19151988000000000,
+      "shift_start": 0,
+      "shift_count": 15097721471231635
+    },
+    {
+      "classes": [
+        0,
+        5
+      ],
+      "type": "absent"
+    },
+    {
+      "classes": [
+        0,
+        6
+      ],
+      "type": "complete"
+    },
+    {
+      "classes": [
+        0,
+        7
+      ],
+      "type": "complete"
+    },
+    {
+      "classes": [
+        1,
+        2
+      ],
+      "type": "complete"
+    },
+    {
+      "classes": [
+        1,
+        3
+      ],
+      "type": "complete"
+    },
+    {
+      "classes": [
+        1,
+        4
+      ],
+      "type": "absent"
+    },
+    {
+      "classes": [
+        1,
+        5
+      ],
+      "type": "complete"
+    },
+    {
+      "classes": [
+        1,
+        6
+      ],
+      "type": "absent"
+    },
+    {
+      "classes": [
+        1,
+        7
+      ],
+      "type": "absent"
+    },
+    {
+      "classes": [
+        2,
+        3
+      ],
+      "type": "complete"
+    },
+    {
+      "classes": [
+        2,
+        4
+      ],
+      "type": "complete"
+    },
+    {
+      "classes": [
+        2,
+        5
+      ],
+      "type": "absent"
+    },
+    {
+      "classes": [
+        2,
+        6
+      ],
+      "type": "residue_orbits",
+      "modulus": 3728837500000000,
+      "shift_start": 0,
+      "shift_count": 3414521
+    },
+    {
+      "classes": [
+        2,
+        7
+      ],
+      "type": "residue_orbits",
+      "modulus": 500000000,
+      "shift_start": 0,
+      "shift_count": 1
+    },
+    {
+      "classes": [
+        3,
+        4
+      ],
+      "type": "complete"
+    },
+    {
+      "classes": [
+        3,
+        5
+      ],
+      "type": "absent"
+    },
+    {
+      "classes": [
+        3,
+        6
+      ],
+      "type": "residue_orbits",
+      "modulus": 500000000,
+      "shift_start": 0,
+      "shift_count": 1
+    },
+    {
+      "classes": [
+        3,
+        7
+      ],
+      "type": "residue_orbits",
+      "modulus": 3446761500000000,
+      "shift_start": 0,
+      "shift_count": 818872
+    },
+    {
+      "classes": [
+        4,
+        5
+      ],
+      "type": "residue_orbits",
+      "modulus": 1000000000,
+      "shift_start": 0,
+      "shift_count": 868144719
+    },
+    {
+      "classes": [
+        4,
+        6
+      ],
+      "type": "complete"
+    },
+    {
+      "classes": [
+        4,
+        7
+      ],
+      "type": "complete"
+    },
+    {
+      "classes": [
+        5,
+        6
+      ],
+      "type": "complete"
+    },
+    {
+      "classes": [
+        5,
+        7
+      ],
+      "type": "complete"
+    },
+    {
+      "classes": [
+        6,
+        7
+      ],
+      "type": "complete"
+    }
+  ],
+  "equilibrium": {
+    "phase_seed": [
+      "0.729561114762955591368912391401",
+      "2.35874877823517452922067138108",
+      "0.956643899692458290878485066646",
+      "0.95664389976177597936659803203",
+      "-0.729561114762955591368912391401",
+      "-2.35874877823517452922067138108",
+      "-0.956643899692458290878485066646",
+      "-0.95664389976177597936659803203"
+    ],
+    "phase_strings": [
+      "0.7295611147629555913689123914009550745504861534862433392371145374391770745951280776682996898885647535",
+      "2.358748778235174529220671381077550374497000690040316694065980089402712356950755398020500508715518141",
+      "0.9566438996924582908784850666463103841830282720931362055322141037328657623346314129521560997130144187",
+      "0.9566438997617759793665980320303979203950042598104401849320946090387309455114226810567190912513250568",
+      "-0.7295611147629555913689123914009550745504861534862433392371145374391770745951280776682996898885647535",
+      "-2.358748778235174529220671381077550374497000690040316694065980089402712356950755398020500508715518141",
+      "-0.9566438996924582908784850666463103841830282720931362055322141037328657623346314129521560997130144187",
+      "-0.9566438997617759793665980320303979203950042598104401849320946090387309455114226810567190912513250568"
+    ],
+    "reflection": [
+      4,
+      5,
+      6,
+      7,
+      0,
+      1,
+      2,
+      3
+    ],
+    "phase_assignment": "Every vertex in class c receives phase_strings[c]."
+  },
+  "record": {
+    "minimum_degree": 69151987803168581,
+    "minimum_degree_ratio": "69151987803168581/99999999999999999",
+    "normalized_quotient_gap": "0.0000010805243066367861359518154555661769689944042304481315180529",
+    "normalized_transverse_operator_gap": "0.24007748203315768316817177136332227070280923031024554337203"
+  }
+}

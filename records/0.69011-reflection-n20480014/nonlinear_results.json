@@ -1,0 +1,104 @@
+{
+  "schema": "six-class-nonlinear-local-return-v1",
+  "spec": "/Users/siddhantsood/experiments/approach_155_six_class_density_frontier/records/mu_14133442_20480013/graph_spec.json",
+  "vertex_count": 20480014,
+  "tests": {
+    "dynamics": "Invariant class quotient of dtheta_v/dt=-(1/N) sum_u A_vu sin(theta_v-theta_u)",
+    "normalized_weakest_rate": 5.102219677420632e-06,
+    "integration_time": 4703835.098713923,
+    "time_constants": 24.0,
+    "amplitudes": [
+      1e-08,
+      1e-07,
+      1e-06
+    ],
+    "weakest_quotient_mode_tests": [
+      {
+        "amplitude": 1e-08,
+        "sign": -1,
+        "success": true,
+        "function_evaluations": 1439,
+        "initial_orbit_rms": 9.999999976581311e-09,
+        "final_orbit_rms": 1.4652329996349137e-13,
+        "final_rotation": -1.3824107968275498e-11,
+        "final_rhs_infinity": 4.547470400242297e-17,
+        "initial_energy": -0.028767864264768003,
+        "final_energy": -0.028767864264768017,
+        "energy_nonincreasing": true,
+        "returned": true
+      },
+      {
+        "amplitude": 1e-08,
+        "sign": 1,
+        "success": true,
+        "function_evaluations": 1355,
+        "initial_orbit_rms": 9.999999976581311e-09,
+        "final_orbit_rms": 3.086600144438359e-13,
+        "final_rotation": 9.837688334398837e-12,
+        "final_rhs_infinity": 4.547470400242297e-17,
+        "initial_energy": -0.028767864264768,
+        "final_energy": -0.028767864264768,
+        "energy_nonincreasing": true,
+        "returned": true
+      },
+      {
+        "amplitude": 1e-07,
+        "sign": -1,
+        "success": true,
+        "function_evaluations": 615,
+        "initial_orbit_rms": 1.0000000003901196e-07,
+        "final_orbit_rms": 7.603320844488148e-13,
+        "final_rotation": -6.291109874202888e-12,
+        "final_rhs_infinity": 4.547470400242297e-17,
+        "initial_energy": -0.028767864264768003,
+        "final_energy": -0.028767864264767976,
+        "energy_nonincreasing": true,
+        "returned": true
+      },
+      {
+        "amplitude": 1e-07,
+        "sign": 1,
+        "success": true,
+        "function_evaluations": 699,
+        "initial_orbit_rms": 1.0000000003901196e-07,
+        "final_orbit_rms": 1.8982688822840885e-13,
+        "final_rotation": -1.3538351713972401e-11,
+        "final_rhs_infinity": 9.094940800484594e-17,
+        "initial_energy": -0.028767864264768003,
+        "final_energy": -0.02876786426476799,
+        "energy_nonincreasing": true,
+        "returned": true
+      },
+      {
+        "amplitude": 1e-06,
+        "sign": -1,
+        "success": true,
+        "function_evaluations": 186,
+        "initial_orbit_rms": 9.999999999923635e-07,
+        "final_orbit_rms": 1.2910937664505026e-12,
+        "final_rotation": 1.0805707582622187e-11,
+        "final_rhs_infinity": 4.547470400242297e-17,
+        "initial_energy": -0.02876786426476799,
+        "final_energy": -0.02876786426476801,
+        "energy_nonincreasing": true,
+        "returned": true
+      },
+      {
+        "amplitude": 1e-06,
+        "sign": 1,
+        "success": true,
+        "function_evaluations": 288,
+        "initial_orbit_rms": 9.999999999923635e-07,
+        "final_orbit_rms": 6.57652448102858e-13,
+        "final_rotation": 7.578914379613708e-13,
+        "final_rhs_infinity": 4.547470400242297e-17,
+        "initial_energy": -0.028767864264767986,
+        "final_energy": -0.02876786426476801,
+        "energy_nonincreasing": true,
+        "returned": true
+      }
+    ],
+    "all_returned": true
+  },
+  "outcome": "PASS"
+}

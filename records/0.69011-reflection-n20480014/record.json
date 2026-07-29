@@ -1,0 +1,15 @@
+{
+  "schema": "kuramoto-finite-record-v1",
+  "slug": "0.69011-reflection-n20480014",
+  "source_approach": 155,
+  "architecture": "reflection",
+  "status": "CERTIFIED_REPLAY",
+  "audit_status": "producer_interval_replay",
+  "vertex_count": 20480014,
+  "minimum_degree": 14133442,
+  "mu_exact": "14133442/20480013",
+  "mu_decimal": 0.6901090345987574,
+  "excess_over_11_16_cross_product": 854929,
+  "graph_spec_sha256": "23a7ad7a13137b0c8db3023d713768592dcbccb2639ad20b6d5e62b37ca893ba",
+  "verify_command": "python3 verify.py --spec graph_spec.json --output verification_report.json --skip-fourier"
+}

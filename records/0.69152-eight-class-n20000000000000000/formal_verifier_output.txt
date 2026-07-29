@@ -1,0 +1,9 @@
+CONFIRMED_RIGOROUS
+N=20000000000000000
+minimum_degree=13830397565368202
+mu=13830397565368202/19999999999999999
+unique_equilibrium_in_radius_1e-60_box
+normalized_quotient_gap>1e-6
+normalized_transverse_operator_gap>1/5
+dimension_split=8+19999999999999992=20000000000000000
+Hessian PSD with kernel exactly global rotation.
