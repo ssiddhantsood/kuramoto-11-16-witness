@@ -1,0 +1,15 @@
+{
+  "schema": "kuramoto-finite-record-v1",
+  "slug": "0.69155-ultrasmall-gap-n200000000000000000000000000000000000000000000",
+  "source_approach": 167,
+  "architecture": "ultrasmall-gap",
+  "status": "FORMAL_INTERVAL_CERTIFIED",
+  "audit_status": "producer_1024bit_arb_replay",
+  "vertex_count": 200000000000000000000000000000000000000000000,
+  "minimum_degree": 138310690426227431945615663904064929607280523,
+  "mu_exact": "138310690426227431945615663904064929607280523/199999999999999999999999999999999999999999999",
+  "mu_decimal": 0.6915534521311372,
+  "excess_over_11_16_cross_product": 12971046819638911129850622465038873716488379,
+  "graph_spec_sha256": "92a2cd068b7b8c6369cf8859abd96b07647d2d164d711660da06be30798494f8",
+  "verify_command": "python3 verify.py --spec graph_spec.json"
+}

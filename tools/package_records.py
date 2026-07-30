@@ -237,6 +237,56 @@ def approach_158_records(source_root: Path) -> list[dict]:
     return records
 
 
+def approach_167_records(source_root: Path) -> list[dict]:
+    root = source_root / "approach_167_ultrasmall_gap_continuation"
+    audit_root = source_root / "approach_168_independent_069155376_audit"
+    records = []
+    for spec in sorted((root / "finite").glob("gamma_*_graph_spec.json")):
+        payload = read_json(spec)
+        construction = payload["construction_screen"]
+        key = spec.name.removesuffix("_graph_spec.json")
+        certificate = root / "artifacts" / "certificates" / f"{key}_certificate.json"
+        independently_confirmed = (
+            key == "gamma_1em12"
+            and (audit_root / "verdict.json").exists()
+        )
+        records.append(
+            {
+                "source_approach": 167,
+                "architecture": "ultrasmall-gap",
+                "n": int(payload["vertex_count"]),
+                "degree": int(construction["minimum_degree"]),
+                "mu": Fraction(construction["mu_exact"]),
+                "status": (
+                    "CONFIRMED"
+                    if independently_confirmed
+                    else "FORMAL_INTERVAL_CERTIFIED"
+                ),
+                "audit_status": (
+                    "independent_2048bit_arb_audit"
+                    if independently_confirmed
+                    else "producer_1024bit_arb_replay"
+                ),
+                "spec": spec,
+                "verifier_kind": "ultrasmall-gap",
+                "report": certificate,
+                "audit": (
+                    audit_root / "verdict.json"
+                    if independently_confirmed
+                    else None
+                ),
+                "audit_report": (
+                    audit_root / "AUDIT_REPORT.md"
+                    if independently_confirmed
+                    else None
+                ),
+                "formal": certificate,
+                "nonlinear": None,
+            }
+        )
+    return records
+
+
 def package_verifier(record: dict, target: Path, source_root: Path) -> str:
     kind = record["verifier_kind"]
     if kind == "first":
@@ -284,6 +334,15 @@ def package_verifier(record: dict, target: Path, source_root: Path) -> str:
         )
         shutil.copy2(source, target / "verify.py")
         return "python3 verify.py --spec graph_spec.json --output verification_report.json"
+    if kind == "ultrasmall-gap":
+        source = (
+            source_root
+            / "approach_167_ultrasmall_gap_continuation"
+            / "scripts"
+            / "independent_verify.py"
+        )
+        shutil.copy2(source, target / "verify.py")
+        return "python3 verify.py --spec graph_spec.json"
     raise ValueError(kind)
 
 
@@ -395,6 +454,7 @@ def main() -> None:
         + approach_155_records(source_root)
         + approach_156_records(source_root)
         + approach_158_records(source_root)
+        + approach_167_records(source_root)
     )
     records.sort(key=lambda row: row["mu"])
     used = set()
