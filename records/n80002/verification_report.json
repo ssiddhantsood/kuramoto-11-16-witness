@@ -56,6 +56,18 @@
         "max_residual": "6.284530569199053266687168e-172"
       }
     ],
+    "nonsynchronous_interval_certificate": {
+      "classes": [
+        0,
+        1
+      ],
+      "nonsynchronous_throughout_root_box": true,
+      "phase_separation_interval": {
+        "lower": "1.41500458424797120000000000000",
+        "upper": "1.41500458464797120000000000000"
+      },
+      "separation_strictly_between_0_and_pi": true
+    },
     "order_parameter": "0.03329948425549348445179796106290239205173",
     "phases": [
       "0.7075022922240479773997350048377121875888790404240193199705868159678831260812630176444310394436909795162111910536384726921542675074652906700116449808353475701159",
@@ -333,6 +345,41 @@
       "20522.89614507909480779279492657801125807",
       "22942.72991760505575056680439665458197568"
     ],
+    "interval_certificate": {
+      "all_interval_pivot_lowers_positive": true,
+      "certified_nonrotation_absolute_gap_lower": "0.40000000000000000000",
+      "certified_nonrotation_normalized_gap_lower": "4.9998750031249218770e-6",
+      "exact_rotation_kernel_used": true,
+      "interval_ldlt_pivots": [
+        {
+          "lower": "6415.74055550457100838657513325",
+          "upper": "6415.74056968829816982558117674"
+        },
+        {
+          "lower": "5971.87344348518978550252783095",
+          "upper": "5971.87346287383223984976630580"
+        },
+        {
+          "lower": "404.942476944412462696461227813",
+          "upper": "404.942607715180789686007065341"
+        },
+        {
+          "lower": "2.79015724305680577212654101424",
+          "upper": "2.79088760019619377976813206244"
+        },
+        {
+          "lower": "24.8975354012817863361031162920",
+          "upper": "24.8987266927314670062750137635"
+        },
+        {
+          "lower": "0.0972065545603066728992812115848",
+          "upper": "0.102566856967541459086401332029"
+        }
+      ],
+      "method": "outward-rounded interval LDL^T on H + rotation_projector - 0.4 I",
+      "phase_domain": "the full Krawczyk root box",
+      "uniform_over_certified_root_box": true
+    },
     "normalized_gap": "0.000005335253607870671608510977859842434704723",
     "normalized_gap_above_1e_minus_6": true,
     "reflection_even_eigenvalues": [
