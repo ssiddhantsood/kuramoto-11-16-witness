@@ -313,22 +313,35 @@ def krawczyk_certificate(
     point_jacobian = mp.matrix(jacobian3(root, degrees, mp.cos))
     inverse = point_jacobian ** -1
     interval_jacobian = jacobian3(box, degrees, mp.iv.cos)
-    residual = mp.matrix(torque3(root, degrees, mp.sin))
-    corrected = list(mp.matrix(root) - inverse * residual)
+    # Krawczyk's preconditioner may be any fixed nonsingular real matrix; it
+    # need not be the exact inverse.  Convert the high-precision approximation
+    # to outward-rounded point intervals, then perform every certificate
+    # operation (including the center residual) with interval arithmetic.
+    root_interval = [iv_point(value) for value in root]
+    inverse_interval = [
+        [iv_point(inverse[i, j]) for j in range(3)] for i in range(3)
+    ]
+    residual_interval = torque3(root_interval, degrees, mp.iv.sin)
+    corrected = []
+    for i in range(3):
+        value = root_interval[i]
+        for j in range(3):
+            value -= inverse_interval[i][j] * residual_interval[j]
+        corrected.append(value)
 
     remainder = [[mp.iv.mpf(0) for _ in range(3)] for _ in range(3)]
     for i in range(3):
         for j in range(3):
             product = mp.iv.mpf(0)
             for k in range(3):
-                product += iv_point(inverse[i, k]) * interval_jacobian[k][j]
+                product += inverse_interval[i][k] * interval_jacobian[k][j]
             remainder[i][j] = (mp.iv.mpf(1) if i == j else mp.iv.mpf(0)) - product
 
     image = []
     for i in range(3):
-        value = iv_point(corrected[i])
+        value = corrected[i]
         for j in range(3):
-            value += remainder[i][j] * (box[j] - iv_point(root[j]))
+            value += remainder[i][j] * (box[j] - root_interval[j])
         image.append(value)
     box_bounds = [iv_bounds(value) for value in box]
     image_bounds = [iv_bounds(value) for value in image]
@@ -381,6 +394,118 @@ def quotient_hessian(
             value = -mp.sqrt(degrees[i][j] * degrees[j][i]) * cosine
             matrix[i, j] = matrix[j, i] = value
     return matrix
+
+
+def interval_ldlt_positive(matrix: list[list]) -> list[tuple[mp.mpf, mp.mpf]]:
+    """Prove a symmetric interval matrix positive definite by interval LDL^T.
+
+    Each interval pivot encloses the corresponding exact pivot for every
+    point matrix in ``matrix``.  Strictly positive lower endpoints therefore
+    certify positive definiteness uniformly over the entire interval family.
+    """
+    dimension = len(matrix)
+    lower = [[mp.iv.mpf(0) for _ in range(dimension)] for _ in range(dimension)]
+    pivots = [mp.iv.mpf(0) for _ in range(dimension)]
+    for i in range(dimension):
+        lower[i][i] = mp.iv.mpf(1)
+    for column in range(dimension):
+        pivot = matrix[column][column]
+        for k in range(column):
+            pivot -= lower[column][k] * lower[column][k] * pivots[k]
+        pivot_bounds = iv_bounds(pivot)
+        if pivot_bounds[0] <= 0:
+            raise AssertionError(
+                f"interval LDL^T pivot {column} is not strictly positive"
+            )
+        pivots[column] = pivot
+        for row in range(column + 1, dimension):
+            numerator = matrix[row][column]
+            for k in range(column):
+                numerator -= lower[row][k] * lower[column][k] * pivots[k]
+            lower[row][column] = numerator / pivots[column]
+    return [iv_bounds(pivot) for pivot in pivots]
+
+
+def quotient_interval_certificate(
+    sizes: list[int],
+    degrees: list[list[int]],
+    angle_box: list,
+) -> dict[str, Any]:
+    """Certify a uniform nonrotation quotient gap over the root box.
+
+    The mass-orthonormal quotient Hessian has the exact fixed null vector
+    r=(sqrt(n_i)).  Let R=rr^T/N be the orthogonal rotation projector.  If
+    H+R-cI is positive definite, the rotation eigenvalue has been lifted to
+    1-c and every physical quotient eigenvalue is greater than c.  Interval
+    LDL^T proves this simultaneously for every phase in the Krawczyk box.
+    """
+    phases = reflected_phases(angle_box)
+    dimension = len(sizes)
+    hessian = [
+        [mp.iv.mpf(0) for _ in range(dimension)] for _ in range(dimension)
+    ]
+    for i in range(dimension):
+        for j in range(i + 1, dimension):
+            if not degrees[i][j]:
+                continue
+            cosine = mp.iv.cos(phases[i] - phases[j])
+            hessian[i][i] += degrees[i][j] * cosine
+            hessian[j][j] += degrees[j][i] * cosine
+            geometric_degree = mp.iv.sqrt(
+                mp.iv.mpf(degrees[i][j] * degrees[j][i])
+            )
+            value = -geometric_degree * cosine
+            hessian[i][j] = value
+            hessian[j][i] = value
+
+    vertex_count = sum(sizes)
+    gap_lower = mp.mpf("0.4")
+    shifted = [
+        [mp.iv.mpf(hessian[i][j]) for j in range(dimension)]
+        for i in range(dimension)
+    ]
+    for i in range(dimension):
+        for j in range(dimension):
+            projector = mp.iv.sqrt(mp.iv.mpf(sizes[i] * sizes[j])) / vertex_count
+            shifted[i][j] += projector
+        shifted[i][i] -= gap_lower
+
+    pivot_bounds = interval_ldlt_positive(shifted)
+    return {
+        "method": (
+            "outward-rounded interval LDL^T on "
+            "H + rotation_projector - 0.4 I"
+        ),
+        "phase_domain": "the full Krawczyk root box",
+        "exact_rotation_kernel_used": True,
+        "certified_nonrotation_absolute_gap_lower": mp_text(gap_lower, 20),
+        "certified_nonrotation_normalized_gap_lower": mp_text(
+            gap_lower / vertex_count, 20
+        ),
+        "interval_ldlt_pivots": [
+            {"lower": mp_text(bounds[0], 30), "upper": mp_text(bounds[1], 30)}
+            for bounds in pivot_bounds
+        ],
+        "all_interval_pivot_lowers_positive": True,
+        "uniform_over_certified_root_box": True,
+    }
+
+
+def nonsynchronous_interval_certificate(angle_box: list) -> dict[str, Any]:
+    """Prove two reflected phase classes are distinct throughout the root box."""
+    separation = 2 * angle_box[0]
+    lower, upper = iv_bounds(separation)
+    if lower <= 0 or upper >= mp.pi:
+        raise AssertionError("the root box does not certify nonsynchrony")
+    return {
+        "classes": [0, 1],
+        "phase_separation_interval": {
+            "lower": mp_text(lower, 30),
+            "upper": mp_text(upper, 30),
+        },
+        "separation_strictly_between_0_and_pi": True,
+        "nonsynchronous_throughout_root_box": True,
+    }
 
 
 def reflection_blocks(matrix: mp.matrix) -> tuple[mp.matrix, mp.matrix]:
@@ -516,6 +641,12 @@ def main() -> None:
     if residual >= mp.mpf("1e-140"):
         raise AssertionError("high-precision torque residual is too large")
     krawczyk, phase_box = krawczyk_certificate(angles, spec, degrees)
+    quotient_interval = quotient_interval_certificate(
+        sizes,
+        degrees,
+        phase_box,
+    )
+    nonsynchronous_interval = nonsynchronous_interval_certificate(phase_box)
 
     quotient = quotient_hessian(degrees, phases)
     even, odd = reflection_blocks(quotient)
@@ -581,6 +712,7 @@ def main() -> None:
             "newton_trace": newton_trace,
             "krawczyk": krawczyk,
             "order_parameter": mp_text(order_parameter, 40),
+            "nonsynchronous_interval_certificate": nonsynchronous_interval,
         },
         "quotient": {
             "basis": "mass-orthonormal class-constant coordinates",
@@ -598,6 +730,7 @@ def main() -> None:
             "absolute_gap": mp_text(quotient_gap, 40),
             "normalized_gap": mp_text(normalized_gap, 40),
             "normalized_gap_above_1e_minus_6": True,
+            "interval_certificate": quotient_interval,
         },
         "transverse": transverse,
         "persisted_independent_audit": {

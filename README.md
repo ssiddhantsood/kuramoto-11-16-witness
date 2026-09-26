@@ -111,6 +111,41 @@ The existing formal certificate and verifier are retained unchanged in
 
 ## Verify
 
+### Readable dynamics-to-Hessian audit
+
+To check that the reported Hessian is the one governing the stated
+homogeneous first-order Kuramoto flow, run:
+
+```bash
+python3 -m venv .venv
+.venv/bin/pip install -r requirements-current-record.txt
+.venv/bin/python records/n80002/verify.py
+python3 audit_hessian_dynamics.py
+```
+
+The current-record verifier now interval-certifies the exact equilibrium and
+proves a nonrotation quotient gap greater than `0.4` throughout that root box,
+in addition to its outward-rounded transverse bound. The dependency-free
+readable layer reconstructs the six-class equilibrium, derives the flow
+Jacobian directly, checks `J_mass = -H` analytically and by a finite difference,
+and summarizes those rigorous certificates. It writes the human-readable
+[`DYNAMICS_HESSIAN_AUDIT.md`](DYNAMICS_HESSIAN_AUDIT.md) and the corresponding
+machine-readable [`dynamics_hessian_audit.json`](dynamics_hessian_audit.json).
+
+The conclusion is explicitly conditional on
+
+```text
+d theta_i / dt = (K/N) sum_j A_ij sin(theta_j - theta_i),  K > 0,
+```
+
+with identical natural frequencies removed in a rotating frame. It establishes
+local asymptotic stability modulo global rotation, not global attraction or a
+basin radius. See the explicit
+[`KURAMOTO_SYSTEM_CONTRACT.md`](KURAMOTO_SYSTEM_CONTRACT.md) for assumptions and
+systems not covered by the certificate.
+
+### Record verifiers
+
 Install the existing dependencies once:
 
 ```bash
@@ -118,6 +153,10 @@ python3 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
 ```
+
+The current `N=80,002` record verifier itself requires only `mpmath>=1.3`, as
+listed in `requirements-current-record.txt`. The full requirements file also
+contains the optional formal-verifier dependency.
 
 Verify the current record:
 
