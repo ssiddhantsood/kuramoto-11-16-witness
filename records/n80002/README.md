@@ -93,6 +93,14 @@ about those seeds, proving existence and uniqueness within that box. This is
 local uniqueness; the unrestricted trigonometric system has other roots,
 including synchronous ones.
 
+The independent [`verify_arb.py`](verify_arb.py) starts instead from the long
+stored phase center and uses 512-bit Arb ball arithmetic through
+`python-flint`. It certifies a unique exact root in a radius-`10^-100` box,
+without importing the mpmath verifier or its saved report.
+The hypothesis-by-hypothesis application of the machine-checked blow-up
+theorem is documented in
+[`CLIQUE_BLOWUP_APPLICATION.md`](CLIQUE_BLOWUP_APPLICATION.md).
+
 The independent audit found maximum six-torque residual below
 \(8.5\times10^{-227}\). The order parameter is approximately
 \(0.03329948\), so the equilibrium is nonsynchronous.

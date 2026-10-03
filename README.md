@@ -120,6 +120,7 @@ homogeneous first-order Kuramoto flow, run:
 python3 -m venv .venv
 .venv/bin/pip install -r requirements-current-record.txt
 .venv/bin/python records/n80002/verify.py
+.venv/bin/python records/n80002/verify_arb.py
 python3 audit_hessian_dynamics.py
 ```
 
@@ -131,6 +132,11 @@ Jacobian directly, checks `J_mass = -H` analytically and by a finite difference,
 and summarizes those rigorous certificates. It writes the human-readable
 [`DYNAMICS_HESSIAN_AUDIT.md`](DYNAMICS_HESSIAN_AUDIT.md) and the corresponding
 machine-readable [`dynamics_hessian_audit.json`](dynamics_hessian_audit.json).
+
+`records/n80002/verify_arb.py` is a second certificate using Arb rather than
+mpmath intervals. It proves a quotient gap greater than `2/5`, a transverse
+gap greater than `17000`, and records the exact hypothesis mapping used by the
+machine-checked clique-blow-up theorem.
 
 The conclusion is explicitly conditional on
 
@@ -154,9 +160,8 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
-The current `N=80,002` record verifier itself requires only `mpmath>=1.3`, as
-listed in `requirements-current-record.txt`. The full requirements file also
-contains the optional formal-verifier dependency.
+The basic `N=80,002` verifier uses `mpmath>=1.3`; its independent Arb verifier
+uses `python-flint`. Both are listed in `requirements-current-record.txt`.
 
 Verify the current record:
 
